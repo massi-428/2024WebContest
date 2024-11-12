@@ -15,6 +15,10 @@
     font-family: LINESeedJP_Th;
     src: url(../Fonts/LINESeedJP_OTF_Th.woff2) format(woff2);
 }
+@font-face {
+    font-family: FinaCode;
+    src: url(../Fonts/FiraCode-SemiBold.woff2) format(woff2);
+}
 header{
     text-align: right;
 }
@@ -47,6 +51,18 @@ section p{
     font-size: 1.5rem;
     font-family: "LINESeedJP_Rg",sans-serif;
     color: #043c78;
+}
+pre{
+    font-size: 1.8rem;
+    font-family: "FinaCode",sans-serif;
+    background-color: #fff;
+    width: fit-content;
+    padding-left: 0.8%;
+    padding-right: 5%;
+    padding-top: 0.8%;
+    padding-bottom: 0.8%;
+    margin-left: 1%;
+    
 }
 footer{
     font-family: "LINESeedJP_Th",sans-serif;
