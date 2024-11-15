@@ -11,22 +11,22 @@
         <header>
             <div>
                 <nav class="menu">
-                  <ul>
+                <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="introduce_c.html">C language</a></li>
                     <li><a href="introduce_rust.html">RUST</a></li>
                     <li><a href="introduce_java.html">Java</a></li>
                     <li><a href="introduce_python.html">Python</a></li>
                     <li><a href="credit.html">Credit</a></li>
-                  </ul>
+                </ul>
                 </nav>
                 <button class="hamburger">
-                  <span class="line"></span>
-                  <span class="line"></span>
-                  <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
                 </button>
-              </div>
-          </header>
+            </div>
+        </header>
         <main>
             <h1>Code from -zero-</h1>
             <p>プログラミングを─ゼロ─から。さあコーディングを始めよう。</p>
@@ -41,11 +41,154 @@
                     <h2>早速実践</h2>
                     <p>
                         変数についての説明（宣言など）<br>
+                        <br>
+                        まず、変数とはなにかですが、変数とは、プログラム内で使用するデータを保持するためのいわば入れ物のようなものです。<br>
+                        この入れ物には、数値や文字列などを保管することができ、保管した値をとりだして参照するなどといったことができます。
+                        他の変数との区別をつけるためにjava言語においては、変数を宣言する際に以下のような注意点があります。<br>
+                        ・数値や文字列など、どんな値が格納されるのか<br>
+                        ・どんな名前にするのか<br>
+                        ・最初に格納する値は何なのか<br>
+                        変数の宣言<br>
+                        データ型 変数名;<br>
+                        とする必要がある。<br>
+                        <br>
+                        int webcon
+                        webcon = 1<br>
+                        <br>
+                        というように変数名(上記の場合はwebcon)を宣言し、そこに値を代入して初期化することで変数を扱うことができます。<br>
+                        <br>
+                        また、変数のデータ型にも様々な種類があります。<br>
+                        ここでは基本的に使う頻度が多い「int」、「double」、「String」についての説明を軽くします。   <br>
+                        <br>
+                        はじめに、intについてですが、intとは整数を格納するための変数です。わかりやすく例でしめすと、<br>
+                        <br>
+                        int result = 1<br>
+                        <br>
+                        このように記入した場合、「resultは1となる。」となります。整数の値を代入するときはintを使用します。<br>
+                        整数ときたらお次は少数のdoubleです。doubleは少数を格納するための変数です。<br>
+                        <br>
+                        double k = 1.23<br>
+                        <br>
+                        このように記入した場合、「kは1.23となる。」となります。<br>
+                        そして、Stringについてですが、Stringはほかの2つとはちょっと違い、文字列を代入するためのものです。<br>
+                        <br>
+                        String name; name = "Webコン"<br>
+                        <br>
+                        <br>
                         HelloWorld(コンソールに出力する系統のコードの説明)<br>
+                        <br>
+                        次に、文字を入出力するときに使う関数についてです。<br>
+                        javaの場合、print、printlnという関数を使用します。2つの関数の使い方は以下の通りです。<br>
+                        <br>
+                        System.out.print(表示する内容)<br>
+                        System.out.println(表示する内容)<br>
+                        <br>
+                        2つの関数の違いについてですが、printは末尾に改行が付きませんが、printlnには末尾に自動的に改行がつくという違いがあります。<br>
+                        <br>
+                        <br>
                         四則演算<br>
+                        <br>
+                        加算・減算・乗算・除算の四則計算と知っててうれしい+αを紹介します。<br>
+                        加算は+、減算は-、乗算は*、除算は/とそれぞれに算術演算子となるものが存在します。<br>
+                        また、+1や-1を入力するのが面倒くさいなと思ったら、それぞれ++、--という風にすることができます。<br>
+                        そして数字だけでなく文字列も連携することができます。
+                        int webcon1 = 75;<br>
+                        int webcon2 = 3;<br>
+                        と入力し、その後<br>
+                        int result = webcon1 + webcon2;<br>
+                        と入力をすると結果として<br>
+                        result = 78;<br>
+                        となります。<br>
+                        <br>
+                        <br>
                         if文に類するコードの説明<br>
-                        for文に類するコードの説明<br>
+                        <br>
+                        if構文は英語の通り、「もし、？？だった場合」という条件分岐のことです。<br>
+                        条件分岐はプログラミングにおけるもっとも大切なことの1つなのでしっかり覚えましょう。<br>
+                        if文の書き方は以下のように書きます。<br>
+                        if(条件式){<br>
+                            //条件式が真の場合の処理<br>
+                        }else{<br>
+                            //条件式が偽の場合の処理<br>
+                        }<br>
+                        パッとみただけではわかりにくいかもしれないので例とともに説明しようと思います。<br>
+                        <br>
+                        public class Main {<br>
+                            public static void main(String[] args){<br>
+                                int webcon = 10;<br>
+                                if ( webcon == 10 ){<br>
+                                    System.out.println("webconは10です。");<br>
+                                }else{<br>
+                                    System.out.println("webconは10ではありません。");<br>
+                                }<br>
+                            }<br>
+                        }<br>
+                        <br>
+                        上の例を実行すると、「webconは10です。」と表示されるはずです。<br>
+                        上の例は、webconに書かれた数を10かそれ以外かを判別し、10の場合は<br>
+                        「webconは10です。」<br>
+                        それ以外だと<br>
+                        「webconは10ではありません。」<br>
+                        と表示されます。<br>
+                        <br>
+                        このようにif文は、こちらが指定した条件に合うものと合わないものをわけることができる優れたものです。<br>
+                        プログラミングでできることがとても増えるのでこれをfor構文と一緒に覚えましょう。<br>
+                        <br>
+                        <br>
+                        for文に類するコードの説明文<br>
+                        <br>
+                        for文は指定した回数だけ処理をするときに使われます。for構文は以下のように書きます。<br>
+                        <br>
+                        for( 初期化式; 条件式; 変化式){<br>
+                            繰り返し実行をしたい処理<br>
+                        }<br>
+                        <br>
+                        初期化式、条件式、変化式についてよくわからないと思うので、1つずつ解説していきます。<br>
+                        まず、初期化式についてですが、初期化式は for文が実行されるときに最初の一回だけ実行される式で、条件式で使用する変数の初期化などを主に行います。<br>
+                        次に条件式についてですが、これはfor文の繰り返し処理をするための条件のようなものです。<br>
+                        条件式にあうと、{}の中のブロック内に記述された処理を上から順に実行し、条件に合わなくなった場合繰り返し処理を終了し for 文の次へ処理を映します。<br>
+                        繰り返しが一度実行せれブロックの最後に到達したら、最後に変化式が数を変化させます。<br>
+                        変化させるといっても+2や*2などを最後につけたすというものですが。<br>
+                        言葉では難しいと思うので例を下に書いて説明しようと思います。<br>
+                        <br>
+                        for (int webcon = 0; webcon < 2; webcon++){<br>
+                            System.out.println("iwebcon=" + webcon);<br>
+                        }<br>
+                        <br>
+                        このように入力した場合以下のような手順で処理が実行されます。<br>
+                        <br>
+                        ①　初期化式で変数 webcon の宣言と初期化(webcon = 0)<br>
+                        ②　条件式を評価 webson < 2 は条件を満たすので繰り返しを実行<br>
+                        ③　ブロック内の処理を実行(画面に変数 webcon の値を出力)<br>
+                        ④　繰り返しの1回目終了<br>
+                        ⑤　変化式で変数 webcon に格納されている値を 1 増加(webcon = 1)<br>
+                        ⑥　条件式を評価 webcon < 2 は条件を満たすので繰り返しを実行<br>
+                        ⑦　ブロック内の処理を実行(画面に変数 webcon の値を出力)<br>
+                        ⑧　繰り返しの2回目終了<br>
+                        ⑨　変化式で変数 webcon に格納されている値を 1 増加(webcon = 2)<br>
+                        ⑩　条件式を評価 webcon < 2 は条件を満たしていないので繰り返しを終了<br>
+                        <br>
+                        結果的に繰り返し処理は2回行われ、それぞれ webcon=0 と webcon=1 を画面に出力します。<br>
+                        if構文と一緒に覚えることでできることがとても増えるので是非覚えてほしいです。(2回目)<br>
+                        <br>
+                        <br>
+                        終わりに<br>
+                        <br>
+                        javaについて、理解いただけましたでしょうか？私自身あまりjavaに詳しくないですが、今後javaを触るためのきっかけになれればと思います。<br>
+                        プログラミングがあまり得意でない私でも理解できたので「プログラミングを始めたい！」と思う方はjavaから始めて見てはと考えました。<br>
+                        <br>
+                        <br>
+                        参考資料<br>
+                        https://www.javadrive.jp/start/for/index2.html<br>
+                        https://uxmilk.jp/48801<br>
+                        https://qiita.com/nukoxo/items/cb2a1413b22ac67bc737<br>
+                        https://www.javadrive.jp/start/var/index1.html<br>
+                        https://qiita.com/morioheisei/items/3d27e82d6cd88068dded<br>
+                        https://x-tech.pasona.co.jp/media/detail.html?p=2610<br>
+                        <br>
+                        <br>
                     </p>
+
             </section>
         </main>
         <footer>
