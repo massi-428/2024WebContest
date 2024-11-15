@@ -1,27 +1,11 @@
-@font-face {
-	font-family: Makinas-Square;
-	src: url(../Fonts/Makinas-4-Square.woff2) format(woff2);
-	font-display: swap;
+* {
+	box-sizing: border-box;
 }
 
-@font-face {
-	font-family: Makinas-Flat;
-	src: url(../Fonts/Makinas-4-Flat.woff2) format(woff2);
-}
-
-@font-face {
-	font-family: LINESeedJP_Rg;
-	src: url(../Fonts/LINESeedJP_OTF_Rg.woff2) format(woff2);
-}
-
-@font-face {
-	font-family: LINESeedJP_Th;
-	src: url(../Fonts/LINESeedJP_OTF_Th.woff2) format(woff2);
-}
-
-@font-face {
-	font-family: FinaCode;
-	src: url(../Fonts/FiraCode-SemiBold.woff2) format(woff2);
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
 }
 
 .loader {
@@ -50,53 +34,86 @@
 	}
 }
 
-.loader .loadingtext {
-	
-}
-
-.loader .loadingtext span {
-	
-}
-
 header {
 	text-align: right;
 }
 
-main h1 {
-	margin-top: 1rem;
-}
+main {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-image: url(../Images/bg_main.jpg);
+	background-repeat: no-repeat;
 
-main p {
-	font-size: 1.5rem;
-	font-family: "Makinas-Square", sans-serif;
-}
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		backdrop-filter: blur(3px);
+	}
 
-h1 {
-	padding-top: 0.4rem;
-	font-size: 5.8rem;
-	font-family: "Makinas-Square", sans-serif;
-	margin-bottom: 0.2rem;
-	color: #000;
-}
+	> div {
+		position: absolute;
+		inset: 0;
+		margin: auto;
+		width: 60%;
+		min-height: fit-content;
+		text-align: center;
+		display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
 
-h2 {
-	width: fit-content;
-	font-size: 3rem;
-	color: #192f60;
-	font-family: "Makinas-Flat", sans-serif;
-	border-bottom: 4px #192f60 solid;
-	border-width: 100%;
+		> img {
+			width: 100%;
+			margin: 1em;
+			filter: invert(100%);
+		}
+
+		> p {
+			text-align: center;
+			width: 140%;
+			font-size: calc(0.5em + 1vw);
+			font-family: "Makinas-Square", sans-serif;
+			line-height: 1.75em;
+			color: white;
+		}
+	}
 }
 
 section {
-	background-color: #82cddd;
+	position: relative;
+	top: 0;
+	padding: calc(2% + 1.5vh);
+
+	> h2 {
+		width: fit-content;
+		margin: 2.5% 0;
+		font-size: calc(1em + 2vw);
+		color: black;
+		font-family: "Makinas-Flat", sans-serif;
+
+		&::before {
+			content: "≫";
+		}
+	}
+
+	> p {
+		width: fit-content;
+		margin: 2.5% 0;
+		font-size: calc(0.5em + 1.25vw);
+		font-family: "LINESeedJP_Rg", sans-serif;
+		line-height: 2em;
+		letter-spacing: 0.125em;
+		color: black;		
+	}
 }
 
-section p {
-	width: fit-content;
-	font-size: 1.5rem;
-	font-family: "LINESeedJP_Rg", sans-serif;
-	color: #043c78;
+footer {
+	padding: 2%;
+	text-align: center;
+	font-family: "LINESeedJP_Th", sans-serif;
 }
 
 /*下線を動かすためのコード*/
@@ -119,10 +136,6 @@ section p {
 
 .Text-Span.isActive:after {
 	width: 100%;
-}
-
-footer {
-	font-family: "LINESeedJP_Th", sans-serif;
 }
 
 /*以下ハンバーガーメニュー用*/
@@ -245,7 +258,42 @@ footer {
 	animation: fadeOut 800ms ease forwards;
 }
 
+#particles-js {
+	position: fixed;
+}
+
 @keyframes fadeOut {
-	0% { opacity: 1; }
-	100% { opacity: 0; }
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		z-index: -99;
+	}
+}
+
+@font-face {
+	font-family: Makinas-Square;
+	src: url(../Fonts/Makinas-4-Square.woff2) format(woff2);
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Makinas-Flat;
+	src: url(../Fonts/Makinas-4-Flat.woff2) format(woff2);
+}
+
+@font-face {
+	font-family: LINESeedJP_Rg;
+	src: url(../Fonts/LINESeedJP_OTF_Rg.woff2) format(woff2);
+}
+
+@font-face {
+	font-family: LINESeedJP_Th;
+	src: url(../Fonts/LINESeedJP_OTF_Th.woff2) format(woff2);
+}
+
+@font-face {
+	font-family: FinaCode;
+	src: url(../Fonts/FiraCode-SemiBold.woff2) format(woff2);
 }
