@@ -1,66 +1,74 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <meta charset="utf-8" />
-    <title>Code from -zero-</title>
-    <meta
-      name="description"
-      content="プログラミングを─ゼロ─から。さあコーディングを始めよう。"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="CSS/index.css" />
+    <meta charset="utf-8">
+    <title>code.from(zero);</title>
+    <meta name="description" content="プログラミングを─ゼロ─から。さあコーディングを始めよう。">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="CSS/particleJS.css">
+    <link rel="stylesheet" type="text/css" href="CSS/index.css">
   </head>
   <body>
-    <div class="loader">
-      <p class="loadingtext">
-      </p>
-    </div>
+    <div class="loader"><p></p></div>
     <header>
         <div>
             <nav class="menu">
               <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="introduce_c.html">C language</a></li>
+                <li><a href="introduce_c.html">C</a></li>
                 <li><a href="introduce_rust.html">RUST</a></li>
                 <li><a href="introduce_java.html">Java</a></li>
                 <li><a href="introduce_python.html">Python</a></li>
                 <li><a href="credit.html">Credit</a></li>
               </ul>
             </nav>
-            <button class="hamburger">
+            <button class="hamburger" title="hamburger">
               <span class="line"></span>
               <span class="line"></span>
               <span class="line"></span>
             </button>
-          </div>
-      </header>
+        </div>
+    </header>
+    <div id="particles-js"></div>
     <main>
-      <h1>Code from -zero-</h1>
-      <p>プログラミングを─ゼロ─から。さあコーディングを始めよう。</p>
-      <section>
-        <h2>このサイトの目的</h2>
-        <p>
-          このサイトは「プログラミングを始めたい」という人や
-          <span class="Text"><span class="Text-Span JS_ScrollAnimationItem">C言語</span></span>、
-          <span class="Text"><span class="Text-Span JS_ScrollAnimationItem">RUST</span></span>、
-          <span class="Text"><span class="Text-Span JS_ScrollAnimationItem">Java</span></span>、
-          <span class="Text"><span class="Text-Span JS_ScrollAnimationItem">Python</span></span>
-          を学ぶ人たちの足掛かりになることを目指して制作したサイトです。<br/>
-          サイト制作にあたりその言語をほとんど学んだことがない人がイチから学び、まとめました。
-        </p>
-        <h2>サイトの構成</h2>
-        <p>
-          各言語について調べ、実際に体験したことをレポート形式で記載しています。<br />
-          今回はプログラミングを初めてすぐに取り掛かるであろう部分のみをピックアップしているためClassや構造体、ポインタなどの複雑な内容は含んでいません。
-        </p>
-        <h2>このサイトの使い方</h2>
-        <p>
-          このサイトは複数の言語について解説しています。<br />
-          各言語の説明にはページ上部のハンバーガーメニュー内にある学習したい言語をクリックすることで閲覧することができます。
-        </p>
-      </section>
+      <div>
+        <img src="Images/logo.svg">
+        <p>プログラミングを─ゼロ─から。<br>さあコーディングを始めよう。</p>
+      </div>
     </main>
+    <div class="container">
+      
+    </div>
+    <section>
+      <h2>このサイトの目的</h2>
+      <p>
+        このサイトは「プログラミングを始めたい」という人や
+        <span class="Text"><span class="Text-Span JS_ScrollAnimationItem">C言語</span></span>、
+        <span class="Text"><span class="Text-Span JS_ScrollAnimationItem">RUST</span></span>、
+        <span class="Text"><span class="Text-Span JS_ScrollAnimationItem">Java</span></span>、
+        <span class="Text"><span class="Text-Span JS_ScrollAnimationItem">Python</span></span>
+        を学ぶ人たちの足掛かりになることを目指して制作したサイトです。<br>
+        サイト制作にあたりその言語をほとんど学んだことがない人がイチから学び、まとめました。
+      </p>
+    </section>
+    <section>
+      <h2>サイトの構成</h2>
+      <p>
+        各言語について調べ、実際に体験したことをレポート形式で記載しています。<br>
+        今回はプログラミングを初めてすぐに取り掛かるであろう部分のみをピックアップしているためクラスや構造体、ポインタなどの複雑な内容は含んでいません。
+      </p>
+    </section>
+    <section>
+      <h2>このサイトの使い方</h2>
+      <p>
+        このサイトは複数の言語について解説しています。<br>
+        各言語の説明にはページ上部のハンバーガーメニュー内にある学習したい言語をクリックすることで閲覧することができます。
+      </p>
+    </section>
+    
     <footer>このサイトはWebコンテスト用です</footer>
-    <script src="/JavaScript/index.js" type="module"></script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="JavaScript/index.js" type="module"></script>
+    <script src="JavaScript/particleJS.js"></script>
   </body>
 </html>

@@ -14,10 +14,10 @@ export class Loader {
     constructor(target) {
         /** ロード画面を構成する要素 */
         this.target = target;
-        /** `<p>`の中の文章 */
-        this.defaultText = target.innerText;
         /** `target`の子に相当する要素 (`<p>`) */
         this.textField = target.querySelector("p");
+        /** `<p>`の中の文章 */
+        this.defaultText = this.textField.innerText;
     }
 
     /**
@@ -32,13 +32,13 @@ export class Loader {
 
     /**
      * ロード画面に表示するテキストを表示する
-     * @param {string} innerHTML 設定するテキスト。バッククォートを使えばHTMLタグを内包できる
+     * @param {string} innerHTML 設定するテキスト。バッククォートを使えばHTMLタグ無しで改行できる
      * @returns インスタンス
      */
     setText(innerHTML) {
         if (innerHTML) {
             this.textField.innerHTML = innerHTML;
-            this.defaultText = this.target.innerText;
+            this.defaultText = innerHTML;
         }
         return this;
     }
@@ -50,7 +50,7 @@ export class Loader {
      */
     animate(duration = 20) {
         this.textField.innerText = "";
-
+        
         // textの一文字ずつをspanタグで囲う
         this.defaultText.split("").map((char) => {
             let span = document.createElement("span");
