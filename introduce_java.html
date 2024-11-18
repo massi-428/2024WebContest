@@ -2,10 +2,11 @@
 <html lang="ja">
     <head>
         <meta charset="utf-8">
-        <title>Code from -zero-</title>
+        <title>code.from(zero)</title>
         <meta name="description" content="プログラミングを─ゼロ─から。さあコーディングを始めよう。">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="/CSS/introduce.css">
+        <link rel="stylesheet" type="text/css" href="CSS/particleJS.css">
+        <link rel="stylesheet" type="text/css" href="CSS/introduce.css">
     </head>
     <body>
         <header>
@@ -28,8 +29,11 @@
             </div>
         </header>
         <main>
+            <div>
             <h1>Code from -zero-</h1>
             <p>プログラミングを─ゼロ─から。さあコーディングを始めよう。</p>
+            </div>
+        </main>
             <section>
                 <h2>Javaの特徴</h2>
                     <p>
@@ -38,8 +42,9 @@
                         Javaは実行環境の自由度が高く、一度書いたコードはJVMを通してどんなコンピュータでも使えるため、プラットフォームを問わず実行できます。<br>
                         またjavaは、ソースコードをパソコンなどの機械が理解可能な言語に翻訳してから、処理が実行されるコンパイラ言語です。そのため処理速度が速く安定しており、基幹システムや組み込みでも使用に耐え、重要なシステムを開発する点において大きなメリットといえます。
                     </p>
-                    <h2>早速実践</h2>
-                        <h3>変数についての説明（宣言など）</h3>
+            </section>
+            <section>
+                <h2>変数についての説明（宣言など）</h2>
                     <p>
                         まず、変数とはなにかですが、変数とは、プログラム内で使用するデータを保持するためのいわば入れ物のようなものです。<br>
                         この入れ物には、数値や文字列などを保管することができ、保管した値をとりだして参照するなどといったことができます。
@@ -88,7 +93,9 @@
                     <p>
                         2つの関数の違いについてですが、printは末尾に改行が付きませんが、printlnには末尾に自動的に改行がつくという違いがあります。<br>
                     </p>
-                        <h3>四則演算</h3>
+            </section>
+            <section>
+                <h2>四則演算</h2>
                     <p>
                         加算・減算・乗算・除算の四則計算と知っててうれしい+αを紹介します。<br>
                         加算は+、減算は-、乗算は*、除算は/とそれぞれに算術演算子となるものが存在します。<br>
@@ -107,7 +114,9 @@
                     <p>
                         となります。<br>
                     </p>
-                        <h3>if文に類するコードの説明</h3>
+            </section>
+            <section>
+                <h2>if文に類するコードの説明</h2>
                     <p>
                         if構文は英語の通り、「もし、??だった場合」という条件分岐のことです。<br>
                         条件分岐はプログラミングにおけるもっとも大切なことの1つなのでしっかり覚えましょう。<br>
@@ -131,7 +140,9 @@
                         このようにif文は、こちらが指定した条件に合うものと合わないものをわけることができる優れたものです。<br>
                         プログラミングでできることがとても増えるのでこれをfor構文と一緒に覚えましょう。<br>
                     </p>
-                        <h3>for文に類するコードの説明文</h3>
+            </section>
+            <section>
+                <h2>for文に類するコードの説明文</h2>
                     <p>
                         for文は指定した回数だけ処理をするときに使われます。for構文は以下のように書きます。<br>
                         <br>
@@ -169,14 +180,14 @@
                         <br>
                         <br>
                     </p>
-                        <h2>終わりに</h2>
-                        <br>
+            </section>
+            <section>
+                <h2>終わりに</h2>
                     <p>
-                        javaについて、理解いただけましたでしょうか？私自身あまりjavaに詳しくないですが、今後javaを触るためのきっかけになれればと思います。<br>
+                        javaについて、理解いただけましたでしょうか?私自身あまりjavaに詳しくないですが、今後javaを触るためのきっかけになれればと思います。<br>
                         プログラミングがあまり得意でない私でも理解できたので「プログラミングを始めたい！」と思う方はjavaから始めて見てはと考えました。<br>
                     </p>
-                        <br>
-                        <br>
+            </section>
                         参考資料<br>
                         https://www.javadrive.jp/start/for/index2.html<br>
                         https://uxmilk.jp/48801<br>
@@ -185,15 +196,9 @@
                         https://qiita.com/morioheisei/items/3d27e82d6cd88068dded<br>
                         https://x-tech.pasona.co.jp/media/detail.html?p=2610<br>
                         <br>
-                        <br>
-                    </p>
-
-            </section>
-        </main>
-        <footer>
-            このサイトはWebコンテスト用です
-        </footer>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="/JavaScript/index.js"></script>
+        <footer>このサイトはWebコンテスト用です</footer>
+        <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script src="JavaScript/index.js" type="module"></script>
+        <script src="JavaScript/particleJS.js"></script>
     </body>
 </html>

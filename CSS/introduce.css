@@ -1,28 +1,87 @@
-@font-face{
-    font-family:Makinas-Square;
-    src:url(../Fonts/Makinas-4-Square.woff2) format(woff2);
-    font-display:swap;
-}
-@font-face {
-    font-family: Makinas-Flat;
-    src: url(../Fonts/Makinas-4-Flat.woff2) format(woff2);
-}
-@font-face {
-    font-family: LINESeedJP_Rg;
-    src: url(../Fonts/LINESeedJP_OTF_Rg.woff2) format(woff2);
-}
-@font-face {
-    font-family: LINESeedJP_Th;
-    src: url(../Fonts/LINESeedJP_OTF_Th.woff2) format(woff2);
-}
-@font-face {
-    font-family: FinaCode;
-    src: url(../Fonts/FiraCode-SemiBold.woff2) format(woff2);
+*{
+    box-sizing: border-box;
 }
 header{
     text-align: right;
 }
-main h1{
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+main {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-repeat: no-repeat;
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		backdrop-filter: blur(3px);
+	}
+
+	> div {
+		position: absolute;
+		inset: 0;
+		margin: auto;
+		width: 60%;
+		min-height: fit-content;
+		text-align: center;
+		display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+
+		> img {
+			width: 100%;
+			margin: 1em;
+			filter: invert(100%);
+		}
+
+		> p {
+			text-align: center;
+			width: 140%;
+			font-size: calc(0.5em + 1vw);
+			font-family: "Makinas-Square", sans-serif;
+			line-height: 1.75em;
+			color: white;
+		}
+	}
+}
+
+section {
+	position: relative;
+	top: 0;
+	padding: calc(2% + 1.5vh);
+
+	> h2 {
+		width: fit-content;
+		margin: 2.5% 0;
+		font-size: calc(1em + 2vw);
+		color: black;
+		font-family: "Makinas-Flat", sans-serif;
+
+		&::before {
+			content: "≫";
+		}
+	}
+
+	> p {
+		width: fit-content;
+		margin: 2.5% 0;
+		font-size: calc(0.5em + 1.25vw);
+		font-family: "LINESeedJP_Rg", sans-serif;
+		line-height: 2em;
+		letter-spacing: 0.125em;
+		color: black;		
+	}
+}
+
+/*main h1{
 margin-top: 1rem;
 }
 main p{
@@ -44,14 +103,11 @@ h2{
     border-bottom: 4px #192f60 solid;
     border-width: 100%;
 }
-section{
-    background-color: #82cddd;
-}
 section p{
     font-size: 1.5rem;
     font-family: "LINESeedJP_Rg",sans-serif;
     color: #043c78;
-}
+}*/
 pre{
     font-size: 1.8rem;
     font-family: "FinaCode",sans-serif;
@@ -75,21 +131,21 @@ footer{
     align-items: center;
     list-style-type: none;
     padding: 0;
-  margin: 0;
-  position: fixed;
-  top: -100vh;
-  left: 0;
-  width: 100vw;
+    margin: 0;
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100vw;
 }
 
 .menu li {
-  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     transition: transform .3s ease-in-out;
     height: 100vh;
-  width: 20vw;
+    width: 20vw;
 }
 
 .menu li a {
@@ -153,33 +209,55 @@ footer{
     position: fixed;
     top: 1rem;
     right: 1rem;
-  border: 0;
-  cursor: pointer;
+    border: 0;
+    cursor: pointer;
     width: 2rem;
     height: 2rem;
 }
 
 .hamburger:focus {
-  outline: 0;
+    outline: 0;
 }
 
 .hamburger .line {
-  background-color: #000;
-  display: block;
-  margin: 4px auto;
-  height: 2px;
-  width: 20px;
-  transition: all .1s ease-in;
+    background-color: #000;
+    display: block;
+    margin: 4px auto;
+    height: 2px;
+    width: 20px;
+    transition: all .1s ease-in;
 }
 
 .hamburger.open .line:nth-child(1) {
-  transform:translateY(6px) rotate(45deg) ;
+    transform:translateY(6px) rotate(45deg) ;
 }
 
 .hamburger.open .line:nth-child(2) {
-  opacity: 0;
+    opacity: 0;
 }
 
 .hamburger.open .line:nth-child(3) {
-  transform:translateY(-6px) rotate(-45deg) ;
+    transform:translateY(-6px) rotate(-45deg) ;
+}
+
+@font-face{
+    font-family:Makinas-Square;
+    src:url(../Fonts/Makinas-4-Square.woff2) format(woff2);
+    font-display:swap;
+}
+@font-face {
+    font-family: Makinas-Flat;
+    src: url(../Fonts/Makinas-4-Flat.woff2) format(woff2);
+}
+@font-face {
+    font-family: LINESeedJP_Rg;
+    src: url(../Fonts/LINESeedJP_OTF_Rg.woff2) format(woff2);
+}
+@font-face {
+    font-family: LINESeedJP_Th;
+    src: url(../Fonts/LINESeedJP_OTF_Th.woff2) format(woff2);
+}
+@font-face {
+    font-family: FinaCode;
+    src: url(../Fonts/FiraCode-SemiBold.woff2) format(woff2);
 }
