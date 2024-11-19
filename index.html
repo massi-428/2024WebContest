@@ -9,36 +9,32 @@
     <link rel="stylesheet" type="text/css" href="CSS/index.css">
   </head>
   <body>
+    <!-- ロード画面 -->
     <div class="loader"><p></p></div>
-    <header>
-        <div>
-            <nav class="menu">
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="introduce_c.html">C</a></li>
-                <li><a href="introduce_rust.html">RUST</a></li>
-                <li><a href="introduce_java.html">Java</a></li>
-                <li><a href="introduce_python.html">Python</a></li>
-                <li><a href="credit.html">Credit</a></li>
-              </ul>
-            </nav>
-            <button class="hamburger" title="hamburger">
-              <span class="line"></span>
-              <span class="line"></span>
-              <span class="line"></span>
-            </button>
-        </div>
-    </header>
+    <!-- 背景 -->
     <div id="particles-js"></div>
+    <!-- ヘッダーナビゲーション（スクロールすると映る） -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="introduce_c.html">C</a></li>
+          <li><a href="introduce_rust.html">RUST</a></li>
+          <li><a href="introduce_java.html">JAVA</a></li>
+          <li><a href="introduce_python.html">PYTHON</a></li>
+          <li><a href="credit.html">CREDIT</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- メイン画面 -->
     <main>
-      <div>
+      <div class="container">
         <img src="Images/logo.svg">
         <p>プログラミングを─ゼロ─から。<br>さあコーディングを始めよう。</p>
+        <button id="menuOpen" type="menu">はじめる</button>
       </div>
     </main>
-    <div class="container">
-      
-    </div>
+    <!-- 各セクション -->
     <section>
       <h2>このサイトの目的</h2>
       <p>
@@ -65,6 +61,18 @@
         各言語の説明にはページ上部のハンバーガーメニュー内にある学習したい言語をクリックすることで閲覧することができます。
       </p>
     </section>
+    <!-- 全画面ナビゲーション -->
+    <nav id="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="introduce_c.html">C</a></li>
+        <li><a href="introduce_rust.html">RUST</a></li>
+        <li><a href="introduce_java.html">Java</a></li>
+        <li><a href="introduce_python.html">Python</a></li>
+        <li><a href="credit.html">Credit</a></li>
+      </ul>
+      <button id="menuClose" type="menu">×</button>
+    </nav>
     
     <footer>このサイトはWebコンテスト用です</footer>
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
