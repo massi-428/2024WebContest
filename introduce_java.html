@@ -159,24 +159,25 @@
             言葉では難しいと思うので例を下に書いて説明しようと思います。<br>
             <br>
         </p>
-        <pre>for (int webcon = 0; webcon < 2; webcon++){<br>    System.out.println("iwebcon=" + webcon);<br>}<br></pre>
+        <pre>for (int webcon = 0; webcon &lt; 2; webcon++){<br>    System.out.println("webcon=" + webcon);<br>}<br></pre>
         <br>
         <p>
             このように入力した場合以下のような手順で処理が実行されます。<br>
-            <br>
-            ①　初期化式で変数<code>webcon</code>の宣言と初期化(<code>webcon = 0</code>)<br>
-            ②　条件式を評価 <code>webcon &lt; 2</code>は条件を満たすので繰り返しを実行<br>
-                ③　ブロック内の処理を実行(画面に変数 webcon の値を出力)<br>
-                ④　繰り返しの1回目終了<br>
-                ⑤　変化式で変数 <code>webcon</code>に格納されている値を 1 増加(<code>webcon = 1</code>)<br>
-                ⑥　条件式を評価 <code>webcon &lt; 2</code>は条件を満たすので繰り返しを実行<br>
-                    ⑦　ブロック内の処理を実行(画面に変数 <code>webcon</code> の値を出力)<br>
-                    ⑧　繰り返しの2回目終了<br>
-                    ⑨　変化式で変数 <code>webcon</code>に格納されている値を1増加(<code>webcon = 2</code>)<br>
-                    ⑩　条件式を評価 <code>webcon &lt; 2</code>は条件を満たしていないので繰り返しを終了<br>
-                        <br>
-                        結果的に繰り返し処理は2回行われ、それぞれ <code>webcon = 0</code>と<code>webcon = 1</code>を画面に出力します。<br>
-                        <code>if</code>構文と一緒に覚えることでできることがとても増えるので是非覚えてほしいです。(2回目)<br>
+            <ol>
+                <li>初期化式で変数<code>webcon</code>の宣言と初期化(<code>webcon = 0</code>)</li>
+                <li>条件式を評価 <code>webcon &lt; 2</code>は条件を満たすので繰り返しを実行</li>
+                <li>ブロック内の処理を実行(画面に変数 webcon の値を出力)</li>
+                <li>繰り返しの1回目終了</li>
+                <li>変化式で変数 <code>webcon</code>に格納されている値を 1 増加</li>
+                <li>(<code>webcon = 1</code>)</li>
+                <li>条件式を評価 <code>webcon &lt; 2</code>は条件を満たすので繰り返しを実行</li>
+                <li>ブロック内の処理を実行(画面に変数 <code>webcon</code> の値を出力)</li>
+                <li>繰り返しの2回目終了</li>
+                <li>変化式で変数 <code>webcon</code>に格納されている値を1増加(<code>webcon = 2</code>)</li>
+                <li>条件式を評価 <code>webcon &lt; 2</code>は条件を満たしていないので繰り返しを終了</li>
+            </ol>
+            結果的に繰り返し処理は2回行われ、それぞれ <code>webcon = 0</code>と<code>webcon = 1</code>を画面に出力します。<br>
+            <code>if</code>構文と一緒に覚えることでできることがとても増えるので是非覚えてほしいです。(2回目)<br>
         </p>
     </section>
     <section>
@@ -191,5 +192,4 @@
     <script src="JavaScript/common.js"></script>
     <script src="JavaScript/particleJS.js"></script>
 </body>
-
 </html>
