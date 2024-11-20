@@ -29,12 +29,47 @@ const menu = document.querySelector('#menu');
 // メニューを開く
 document.getElementById("menuOpen").addEventListener("click", () => {
 	menu.classList.add("active");
-})
+});
 
 // メニューを閉じる
 document.getElementById("menuClose").addEventListener("click", () => {
 	menu.classList.remove("active");
-})
+});
+
+menu.querySelectorAll("li").forEach((element, i) => {
+	switch (i) {
+		case 0:
+			element.addEventListener("click", () => {
+				window.location = "/";
+			});
+			break;
+		case 1:
+			element.addEventListener("click", () => {
+				window.location = "/introduce_c.html";
+			});
+			break;
+		case 2:
+			element.addEventListener("click", () => {
+				window.location = "/introduce_rust.html";
+			});
+			break;
+		case 3:
+			element.addEventListener("click", () => {
+				window.location = "/introduce_java.html";
+			});
+			break;
+		case 4:
+			element.addEventListener("click", () => {
+				window.location = "/introduce_python.html";
+			});
+			break;
+		case 5:
+			element.addEventListener("click", () => {
+				window.location = "/credit.html";
+			});
+			break;
+	}
+});
 
 // ヘッダーの開閉トリガー
 window.addEventListener("scroll", () => {
@@ -45,7 +80,7 @@ window.addEventListener("scroll", () => {
 	else if (header.classList.contains("active") && window.scrollY === 0) {
 		header.classList.remove("active");
 	}
-})
+});
 
 // ページの読み込みが完了したときに実行される関数
 document.addEventListener('DOMContentLoaded', function () {
