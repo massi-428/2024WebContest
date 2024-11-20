@@ -133,6 +133,11 @@ section {
 		letter-spacing: 0.125em;
 		color: #29323c;		
 	}
+
+	>li{
+		font-family: "LINESeedJP",sans-serif;
+		font-weight: 400;
+	}
 }
 
 footer {
