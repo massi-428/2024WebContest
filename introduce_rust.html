@@ -1,122 +1,122 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <title>code.from(zero);</title>
-        <meta name="description" content="プログラミングを─ゼロ─から。さあコーディングを始めよう。">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="/CSS/introduce.css">
-    </head>
-    <body>
-        <header>
-            <div>
-                <nav class="menu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="introduce_c.html">C language</a></li>
-                    <li><a href="introduce_rust.html">RUST</a></li>
-                    <li><a href="introduce_java.html">Java</a></li>
-                    <li><a href="introduce_python.html">Python</a></li>
-                    <li><a href="credit.html">Credit</a></li>
-                </ul>
-                </nav>
-                <button class="hamburger">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-                </button>
-            </div>
-        </header>
-        <main>
-            <h1>Code from -zero-</h1>
-            <p>プログラミングを─ゼロ─から。さあコーディングを始めよう。</p>
-            <section>
-                <h2>はじめに</h2>
-                <p>
-                    webコンテストの提出2カ月前ぐらいから急にやる気を出して勉強を始めた付け焼刃。<br>
-                    たまに抜けてるとことかあるかもだけどきっと大丈夫だと自分は信じてます。<br>
-                    それでは簡単すぎる紹介をどうぞ！<br>
-                </p>
-                <h2>RUSTの特徴</h2>
-                    <p>
-                        RUSTは、メモリ効率がよく、開発者向けのプログラミング言語です。<br>
-                        データ型のサイズ指定などができ、メモリを最低限に抑えて作業を行うことができます。<br>
-                        C,C++の派生言語であり、C言語を既に習得している人なら割と楽に習得が可能です。<br>
-                    </p>
-                    <h2>早速実践</h2>
-                        <h3>~宣言について~</h3>
-                    <p>
-                        宣言にはletを使います。<br>
-                        RUSTでは、変数宣言にはmutをつけます。mut無しでも勝手に変数宣言として扱ってくれますが、見やすいコードを書くためにmutをつけましょう。<br>
-                    </p>
-                        <pre>let mut x;</pre>
-                    <p>
-                        また、変数型のほかに定数型が存在します。<br>
-                        整数型では、符号付きか符号なしかを選べ、明示的なサイズを持ちます。<br>
-                        また、可変,不変の設定も行うことができ、不変の設定を行うと、プログラムが予期しない動作を起こしたときにエラーを吐いてくれます。<br>
-                    </p>
-                        <h3>~テキストを入出力するための関数~</h3>
-                    <p>
-                        基本的にはC言語と大差ありません。<br>
-                        printfがprint!になっただけです。<br>
-                        かっこの中身もほぼ変わっていませんし、同じと言っても過言ではないでしょう。<br>
-                    </p>
-                        <pre>print!("xの値は{}です。",x);</pre>
-                        <h3>~四則演算~</h3>
-                    <p>
-                        こちらもC言語と大差ありません。<br>
-                    </p>
-                        <pre>x=1+2;</pre>
-                        <pre>y=10%3;</pre>
-                    <p>
-                        あらかじめ用意していた変数に+,-,*,/,%などを使って導き出した計算結果を代入します。<br>
-                        ただし、変数を事前に用意していないとしっかりエラーを吐きます。<br>
-                    </p>
-                        <h3>~if文に類するコード~</h3>
-                        <pre>if a in b{print!("aとbは同じ値です。");}</pre>
-                        <pre>else if a!=c{print!("aとcは同じではありません。");}</pre>
-                        <pre>else{print!("えるす。");}</pre>
-                    <p>
-                        こちらはC言語とは打って変わって、どちらかといえばpython寄りのコードとなっています。 <br>
-                        基本的な動作としてはif 条件{条件に合致した時の動作};と、他の言語と同じような概要です。 <br>
-                    </p>
-                        <h3>~ループに類するコード~</h3>
-                    <p>
-                        for,whileは存在します。
-                    </p>
-                        <pre>for a in b{print!("aはbより小さいです。");}</pre>
-                        <pre>while a==0{print!("aは0です。");}</pre>
-                    <p>
-                        使い方は変わりませんが、条件文はちょっとpython似です。<br>
-                        <br>
-                        また、RUSTにはloopという関数が存在します。<br>
-                        最も簡単なループ文(終了条件もループ条件も書かれていないコード)を書くとき、<br>
-                    </p>
-                        <pre>loop{print!("るーぷ")};</pre>
-                    <p>
-                        これだけでループ文が完成します。<br>
-                        簡単なコードがあって便利ですね。<br>
-                    </p>
-                        <h3>~RUSTを学んだ感想~</h3>
-                    <p>
-                        自分はC言語を事前に修得していたので、似ている部分も多く、分かりやすかったです。<br>
-                        RUSTを学ぶメリットもしっかりと存在していて、コードの構成がわかりやすく、書きやすい。そういう印象を持ちました。<br>
-                        楽しかったです。<br>
-                        また時間が空いたときにでもRUSTを時間をかけて勉強しなおしたいです！ <br>
-                    </p>
-                    <p>
-                        <h3>参考文献</h3>
-                        https://qiita.com/shikuno_dev/items/d8b832294b152877b80d <br>
-                        https://ja.wikipedia.org/wiki/Rust_(プログラミング言語) <br>
-                        https://tourofrust.com/05_ja.html <br>
-                        https://doc.rust-jp.rs/book-ja/title-page.html <br>
-                    </p>
+
+<head>
+    <meta charset="utf-8">
+    <title>code.from(zero);</title>
+    <meta name="description" content="プログラミングを─ゼロ─から。さあコーディングを始めよう。">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="CSS/particleJS.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/style.css">
+</head>
+
+<body>
+    <!-- 背景 -->
+    <div id="particles-js"></div>
+    <!-- ヘッダーナビゲーション（スクロールすると映る） -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="introduce_c.html">C</a></li>
+                <li><a href="introduce_rust.html">Rust</a></li>
+                <li><a href="introduce_java.html">Java</a></li>
+                <li><a href="introduce_python.html">Python</a></li>
+                <li><a href="credit.html">Credit</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Code from -zero-</h1>
+        <p>プログラミングを─ゼロ─から。さあコーディングを始めよう。</p>
+    </main>
+        <section>
+            <h2>はじめに</h2>
+            <p>
+                webコンテストの提出2カ月前ぐらいから急にやる気を出して勉強を始めた付け焼刃。<br>
+                たまに抜けてるとことかあるかもだけどきっと大丈夫だと自分は信じてます。<br>
+                それでは簡単すぎる紹介をどうぞ！<br>
+            </p>
             </section>
-        </main>
-        <footer>
-            このサイトはWebコンテスト用です
-        </footer>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="/JavaScript/index.js"></script>
-    </body>
+            <section>
+            <h2>RUSTの特徴</h2>
+            <p>
+                RUSTは、メモリ効率がよく、開発者向けのプログラミング言語です。<br>
+                データ型のサイズ指定などができ、メモリを最低限に抑えて作業を行うことができます。<br>
+                C,C++の派生言語であり、C言語を既に習得している人なら割と楽に習得が可能です。<br>
+            </p>
+            </section>
+            <section>
+            <h2>早速実践</h2>
+            <h3>~宣言について~</h3>
+            <p>
+                宣言にはletを使います。<br>
+                RUSTでは、変数宣言にはmutをつけます。mut無しでも勝手に変数宣言として扱ってくれますが、見やすいコードを書くためにmutをつけましょう。<br>
+            </p>
+            <pre>let mut x;</pre>
+            <p>
+                また、変数型のほかに定数型が存在します。<br>
+                整数型では、符号付きか符号なしかを選べ、明示的なサイズを持ちます。<br>
+                また、可変,不変の設定も行うことができ、不変の設定を行うと、プログラムが予期しない動作を起こしたときにエラーを吐いてくれます。<br>
+            </p>
+            <h3>~テキストを入出力するための関数~</h3>
+            <p>
+                基本的にはC言語と大差ありません。<br>
+                printfがprint!になっただけです。<br>
+                かっこの中身もほぼ変わっていませんし、同じと言っても過言ではないでしょう。<br>
+            </p>
+            <pre>print!("xの値は{}です。",x);</pre>
+            <h3>~四則演算~</h3>
+            <p>
+                こちらもC言語と大差ありません。<br>
+            </p>
+            <pre>x=1+2;</pre>
+            <pre>y=10%3;</pre>
+            <p>
+                あらかじめ用意していた変数に+,-,*,/,%などを使って導き出した計算結果を代入します。<br>
+                ただし、変数を事前に用意していないとしっかりエラーを吐きます。<br>
+            </p>
+            <h3>~if文に類するコード~</h3>
+            <pre>if a in b{print!("aとbは同じ値です。");}</pre>
+            <pre>else if a!=c{print!("aとcは同じではありません。");}</pre>
+            <pre>else{print!("えるす。");}</pre>
+            <p>
+                こちらはC言語とは打って変わって、どちらかといえばpython寄りのコードとなっています。 <br>
+                基本的な動作としてはif 条件{条件に合致した時の動作};と、他の言語と同じような概要です。 <br>
+            </p>
+            <h3>~ループに類するコード~</h3>
+            <p>
+                for,whileは存在します。
+            </p>
+            <pre>for a in b{print!("aはbより小さいです。");}</pre>
+            <pre>while a==0{print!("aは0です。");}</pre>
+            <p>
+                使い方は変わりませんが、条件文はちょっとpython似です。<br>
+                <br>
+                また、RUSTにはloopという関数が存在します。<br>
+                最も簡単なループ文(終了条件もループ条件も書かれていないコード)を書くとき、<br>
+            </p>
+            <pre>loop{print!("るーぷ")};</pre>
+            <p>
+                これだけでループ文が完成します。<br>
+                簡単なコードがあって便利ですね。<br>
+            </p>
+            <h3>~RUSTを学んだ感想~</h3>
+            <p>
+                自分はC言語を事前に修得していたので、似ている部分も多く、分かりやすかったです。<br>
+                RUSTを学ぶメリットもしっかりと存在していて、コードの構成がわかりやすく、書きやすい。そういう印象を持ちました。<br>
+                楽しかったです。<br>
+                また時間が空いたときにでもRUSTを時間をかけて勉強しなおしたいです！ <br>
+            </p>
+            <p>
+        </section>
+    </main>
+    <footer>
+        このサイトはWebコンテスト用です
+    </footer>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="JavaScript/common.js"></script>
+    <script src="JavaScript/particleJS.js"></script>
+</body>
+
 </html>

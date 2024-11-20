@@ -70,19 +70,3 @@ menu.querySelectorAll("li").forEach((element, i) => {
 			break;
 	}
 });
-
-// ヘッダーの開閉トリガー
-window.addEventListener("scroll", () => {
-	const header = document.querySelector("header");
-	if (window.scrollY >= document.querySelector("section").offsetTop) {
-		header.classList.add("active");
-	}
-	else if (header.classList.contains("active") && window.scrollY === 0) {
-		header.classList.remove("active");
-	}
-});
-
-// ページの読み込みが完了したときに実行される関数
-document.addEventListener('DOMContentLoaded', function () {
-	
-});
