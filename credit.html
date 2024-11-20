@@ -8,39 +8,47 @@
         <link rel="stylesheet" type="text/css" href="../CSS/index.css">
     </head>
     <body>
+        <!-- ロード画面 -->
+        <div class="loader"><p></p></div>
+        <!-- 背景 -->
+        <div id="particles-js"></div>
+        <!-- ヘッダーナビゲーション（スクロールすると映る） -->
         <header>
-            <div>
-                <nav class="menu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="introduce_c.html">C language</a></li>
-                    <li><a href="introduce_rust.html">RUST</a></li>
-                    <li><a href="introduce_java.html">Java</a></li>
-                    <li><a href="introduce_python.html">Python</a></li>
-                    <li><a href="credit.html">Credit</a></li>
-                </ul>
-                </nav>
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </div>
+        <nav>
+            <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="introduce_c.html">C</a></li>
+            <li><a href="introduce_rust.html">RUST</a></li>
+            <li><a href="introduce_java.html">JAVA</a></li>
+            <li><a href="introduce_python.html">PYTHON</a></li>
+            <li><a href="credit.html">CREDIT</a></li>
+            </ul>
+        </nav>
         </header>
-        <main>
-            <h1>Code from -zero-</h1>
-            <p>プログラミングを─ゼロ─から。さあコーディングを始めよう。</p>
-            <section>
-                <h2>参考文献および使用素材紹介</h2>
-                <h3>C言語</h3>
-                <h3>RUST</h3>
-                <h3>Java</h3>
-                <h3>Python</h3>
-                <h2>
-                    使用素材
-                </h2>
-                <p>
-                    ・ハンバーガーメニュー<br>
-                    
-                </p>
+        <!-- メイン画面 -->
+    <main>
+        <div class="container">
+        <img src="Images/logo.svg">
+        <p>プログラミングを─ゼロ─から。<br>さあコーディングを始めよう。</p>
+        </div>
+    </main>
+    <!-- 各セクション -->
+    <section>
+        <h2>参考文献および使用素材</h2>
+        <p>
+            <ul>
+                <li><a href="https://photopizza.design/hamburger_menu_technique/">【jQueryで簡単】超オシャレなハンバーガーメニューのサンプル31選</a></li>
+                <li><a href="https://vincentgarreau.com/particles.js/"></a>particles.js</li>
+            </ul>
+        </p>
+    </section>
+    <section>
+        <h2>サイトの構成</h2>
+        <p>
+        各言語について調べ、実際に体験したことをレポート形式で記載しています。<br>
+        今回はプログラミングを初めてすぐに取り掛かるであろう部分のみをピックアップしているためクラスや構造体、ポインタなどの複雑な内容は含んでいません。
+        </p>
+    </section>
                 <h2>
                     このサイトの使い方
                 </h2>
