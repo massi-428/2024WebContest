@@ -10,8 +10,9 @@
 	left: 0;
 
 	> p {
-		font-size: 3rem;
-		font-family: "Finacode", sans-serif;
+		margin: 1em;
+        font-size: calc(2em + 1vw);
+		font-family: "FiraCode", sans-serif;
 		font-weight: bold;
 		color: #fff;
 
