@@ -92,73 +92,64 @@
     </section>
     <section>
         <h2>変数の設定</h2>
-        <pre>x=5</pre>
+        <script type="text/plain" class="language-python line-numbers">x = 5</script>
         <p>
-            Pythonにおいて変数は=で作成することができる。左側に変数名を、右側に格納したい値を置きます。 
+            Pythonにおいて変数は<code>=</code>で作成することができる。左側に変数名を、右側に格納したい値を置きます。 
         </p>
         <p>
-            上記した変数は変数名がxで、格納された値は5であるので、この変数を読み込むと5が読み込まれます。<br>
+            上記した変数は変数名が<code>x</code>で、格納された値は5であるので、この変数を読み込むと5が読み込まれます。<br>
         </p>
         <p>
             一度定義した変数には新たな値を代入することができます。上記の変数<code>x</code>に新たな値を代入する場合には
         </p>
-        <pre>x=10</pre>
+        <script type="text/plain" class="language-python line-numbers">x = 10</script>
         <p>
             このようにすれば実現できます。こうすることにより、最新の値である10が変数に格納されることになります。 <br>
-            Pythonでは、一つの変数から別の変数へ値を代入することができるのです。 <br>
+            Pythonでは、1つの変数から別の変数へ値を代入することができるのです。 <br>
         </p>
     </section>
+
     <section>
         <h2>コンソールに出力する系統のコードの説明</h2>
-        <pre>print("Hello World") </pre>
+        <script type="text/plain" class="language-python line-numbers">print("Hello World!")</script>
         <p>
-            上記したプログラムを実行すると、コンソールに<code>Hello World</code>と出力することができます。
+            上記したプログラムを実行すると、コンソールに「Hello World!」と出力することができます。
         </p>
         <p>
-            Pythonにおいてコンソールに出力する際は、基本的に<code>print</code>を用いて出力します。 <br>
+            Pythonにおいてコンソールに出力する際は、基本的に<code>print()</code>関数を用いて出力します。 <br>
             <code>print</code>は
         </p>
-        <pre>print("出力したいもの")</pre>
+        <script type="text/plain" class="language-python line-numbers">print(出力したいもの)</script>
         <p>
-            このように<code>print</code>の後に括弧とダブルクオーテーションを使い出力したいものを囲むことによって扱うことができます。
+            このように<code>print()</code>の括弧の中に出力したいものを入れて使用します。<br>
+            出力したいものは変数そのものでも、<code>"</code>（ダブルクォーテーション）で囲った文字列でも構いません。
         </p>
     </section>
+
     <section>
         <h2>四則演算</h2>
         <p>
             Pythonの四則演算のプログラムは、
         </p>
-<pre>
-("〇演算記号〇="演算記号="演算記号(〇演算記号〇))
-</pre>
+<script type="text/plain" class="language-python line-numbers">y = x + a</script>
         <p>
             であらわすことができます。 
         </p>
         <p>
-            上記したプログラムの〇の部分には任意の数字が入り、演算記号の部分には<code>+、-、*、/</code>のいずれかが当てはまります。
-        </p>
-<pre>
-str(4+3)
-</pre>
-        <p>このコードを実行すると、コンソールには下記のように表示されます。</p> 
-<pre>
-4+3=7
-</pre>
-        <p>
-            以上が四則演算のプログラムコードの説明です。
+            上記のプログラムの<code>x</code>と<code>a</code>の部分には任意の数値や、既に値を代入した変数を書き込みます。<br>
+            <code>+</code>は足し算を意味する演算記号で、この部分には行いたい計算に応じて、<code>-</code>（引き算）、<code>*</code>（掛け算）、<code>/</code>（割り算）を書き込むことができます。
         </p>
     </section>
+
     <section>
         <h2>if文に類するコードの説明</h2>
         <p>
-            Pythonの<code>if</code>文は、条件分岐を実現するために使われます。指定した条件がTrue(真)であれば、
-            そのブロック内のコードを実行し、False(偽)であれば実行しないという処理を実装することができます。
+            Pythonの<code>if</code>文は、条件分岐を実現するために使われます。指定した条件が<code>True</code>(真)であれば、
+            そのブロック内のコードを実行し、<code>False</code>(偽)であれば実行しないという処理を実装することができます。
         </p>
-<pre>
-wake_up_time=7
-if wake_up_time==7:
-    print("朝ご飯を食べる")
-</pre>
+<script type="text/plain" class="language-python line-numbers">wake_up_time = 7
+ if wake_up_time == 7:
+     print("朝ご飯を食べる")</script>
         <p>
             上記したプログラムコードが<code>if</code>文のサンプルコードです。
         </p>
@@ -175,22 +166,20 @@ if wake_up_time==7:
             <code>for</code>文は、処理の回数が決まっているループ処理でカウンターの宣言と初期化、条件式、カウンターの更新式の3つの要素から構成されています。
         </p>
 
-<pre>
-for w in words:
-    print(w)
-</pre>
+<script type="text/plain" class="language-python line-numbers">words = "abcde"
+ for w in words:
+     print(w)
+</script>
 
-        <p>この関数を実行した場合、変数<code>w</code>に格納されているものが順番にコンソールに出力されていきます。 <br></p>
+        <p>
+            この関数を実行した場合、変数<code>words</code>に格納されているものが順番にコンソールに出力されていきます。 <br>
+            この場合、<code>words</code>は「abcde」という文字列なので、ループの1回ごとに「a」、「b」、「c」と、順番に出力されます。
+        </p>
     </section>
     <section>
         <h2>おわりに</h2>
         <p>
-            今回WebコンテストのWebサイトを作成するために一度勉強したことのあるPythonを勉強し直しましたが、
-            私は学校の授業で先にCについて勉強していたため、<code>for</code>や<code>print</code>、<code>if</code>を使ってサンプルコードを作成
-            する時にCとこんがらがってぐちゃぐちゃになり、このWebサイトの内容を書く時のほとんどを既存の
-            資料を見ながらになってしまったので、類似性のある言語はわからなくなってももう一つの言語の
-            知識を流用することができるかもしれない一方で、内容が混ざり合ってカオスなコードを書く要因
-            になりかねないと思いました。
+            今回WebコンテストのWebサイトを作成するために一度勉強したことのあるPythonを勉強し直しましたが、私は学校の授業で先にCについて勉強していたため、<code>for</code>や<code>print</code>、<code>if</code>を使ってサンプルコードを作成する時にCとこんがらがってぐちゃぐちゃになり、このWebサイトの内容を書く時のほとんどを既存の資料を見ながらになってしまったので、類似性のある言語はわからなくなってももう一つの言語の知識を流用することができるかもしれない一方で、内容が混ざり合ってカオスなコードを書く要因になりかねないと思いました。
         </p>
     </section>
     <footer>このサイトはWebコンテスト用です</footer>
@@ -206,7 +195,7 @@ for w in words:
 
 <style>
     main {
-        background-image: url(../Images/bg_c.jpg);
+        background-image: url(../Images/bg_python.jpg);
     }
 </style>
 
