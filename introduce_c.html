@@ -6,6 +6,10 @@
     <title>code.from(zero);</title>
     <meta name="description" content="プログラミングを─ゼロ─から。さあコーディングを始めよう。">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/plugins/unescaped-markup/prism-unescaped-markup.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/plugins/line-highlight/prism-line-highlight.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="CSS/particleJS.css">
     <link rel="stylesheet" type="text/css" href="/CSS/style.css">
     <link rel="stylesheet" type="text/css" href="/CSS/introduce.css">
@@ -71,14 +75,12 @@
     <section>
         <h2>言語の基本・Hello World!</h2>
         <p>以下に示すのがプログラミング学習の基本、実行すると「Hello World!」と文字列が表示されるプログラムです。</p>
-        <pre>
-#include <stdio.h>
+        <script type="text/plain" class="language-c line-numbers">#include <stdio.h>
 
 int main() {
     printf("Hello, World!\n");
     return 0;
-}
-        </pre>
+}</script>
         <p>
             今はこれだけ見てもどのような仕組みになっているかわからないと思うかもしれませんが、
             ここからの解説を通してこのプログラムに含まれる各要素の意味を少しずつ理解してもらえたらなと思います。
@@ -104,15 +106,10 @@ int main() {
             変数の種類である「型」が箱の名前です。
         </p>
         <p>変数を使うには、何という変数を使うかの「宣言」を行い、必要に応じて値を「代入」することになります。</p>
-        <h3>例</h3>
-        <pre>
-int level;         // 変数を宣言<br>
-level = 18;         // 値を代入<br>
-            </pre>
+        <script type="text/plain" class="language-c line-numbers">int level;         // 変数を宣言
+level = 18;         // 値を代入</script>
         <br>
-        <pre>
-float price = 12.5;  // 宣言と同時に代入<br>
-            </pre>
+        <script type="text/plain" class="language-c line-numbers">float price = 12.5;  // 宣言と同時に代入</script>
         <p>
             ちなみに、C言語をはじめとした多くの言語では、コードに影響を及ぼさない文字列をメモなどの用途で書くために
             コメントという機能があり、<code>//</code>の後に文字を書くことで使えます。
@@ -120,20 +117,18 @@ float price = 12.5;  // 宣言と同時に代入<br>
         <p>以下に代表的な変数をゲームのプログラムで使うと仮定した例を交えて紹介します。</p>
         <h3 class="numbering">int (整数型)</h3>
         <p>整数を格納するための変数です。</p>
-        <pre>int level = 18; // レベルを18とする</pre>
+        <script type="text/plain" class="language-c line-numbers">int level = 18; // レベルを18とする</script>
         <p>このようにプレイヤーのレベル等の整数の値を定義する際に使われます。</p>
         <h3 class="numbering">float (浮動小数点型)</h3>
         <p>少数を含む値を格納するための変数です。</p>
-        <pre>float price = 12.5;  // 値段を12.5とする</pre>
+        <script type="text/plain" class="language-c line-numbers">float price = 12.5;  // 値段を12.5とする</script>
         <p>
             このように物の値段などを定義する際に利用します。<br>
             ほとんど小数点があるか否かだけの違いなので、<code>int</code>に近い使われ方をします。
         </p>
         <h3 class="numbering">char (文字型)</h3>
         <p>1文字を格納するための変数です。</p>
-        <pre>
-char  grade = 'A'; //グレードをAとする<br>
-            </pre>
+        <script type="text/plain" class="language-c line-numbers">char  grade = 'A'; // グレードをAとする</script>
         <p>
             アイテムのグレードを表したり、
             1文字で表現できる概念の定義に使われます。
@@ -141,10 +136,8 @@ char  grade = 'A'; //グレードをAとする<br>
         <p>また、文字は<code>'</code>（シングルクォーテーション）で囲む必要があります。</p>
         <p>このような変数が実際にゲームのプログラムなどでも使われています。</p>
         <p>ちなみに余談ですが、char型を応用すれば文字列を格納することができます。</p>
-        <pre>
-char playerName[20]; // プレイヤー名のメモリを最大20文字で確保<br>
-playerName = "Dr.WebContest"; // プレイヤー名を20文字まで入力できる
-            </pre>
+        <script type="text/plain" class="language-c line-numbers">char playerName[20]; // プレイヤー名のメモリを最大20文字で確保<br>
+playerName = "Dr.WebContest"; // プレイヤー名を20文字まで入力できる</script>
         <p>このようにしてメモリを確保してそのメモリに実際のプレイヤー名を代入することで複数文字、言い換えれば「文字列」を格納することができます。</p>
         <p>
             この場合文字列を<code>"</code>（ダブルクォーテーション）で囲む必要があります。また、最大20文字というのは英数字などの半角文字のみに限り、
@@ -161,9 +154,7 @@ playerName = "Dr.WebContest"; // プレイヤー名を20文字まで入力でき
         <h3 class="numbering">printf 関数</h3>
         <p>これは指定した形式でテキストや変数の値などの情報を画面に出力する関数です。</p>
         <p>基本構造としては</p>
-        <pre>
-printf("表示する文章\n");
-            </pre>
+        <script type="text/plain" class="language-c line-numbers">printf("表示する文章\n");</script>
         <p>のように記述します。</p>
         <h3 class="numbering">scanf 関数</h3>
         <p>
@@ -171,18 +162,21 @@ printf("表示する文章\n");
             ユーザーが入力した文字列を読み取る命令を行うものです。
         </p>
         <p>基本構造としては</p>
-        <pre>
-scanf("あなたの名前を教えてください\n");
-            </pre>
+        <script type="text/plain" class="language-c line-numbers">scanf("あなたの名前を教えてください\n");</script>
         <p>のように扱います。</p>
         <p>
-            文字列を扱うときには、文字列を<code>""</code>で囲み、文字列の途中で改行を行いたい祭は、末尾に<code>\n</code>を入れましょう。<br>
+            文字列を扱うときには、文字列を<code>""</code>で囲み、文字列の途中で改行を行いたい際は、末尾に<code>\n</code>を入れましょう。<br>
             また、行の最後に入っている<code>;</code>（セミコロン）はコードの終わりを意味するので、これも忘れないようにしましょう。
         </p>
     </section>
     <footer>
         このサイトはWebコンテスト用です
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/plugins/line-highlight/prism-line-highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/plugins/unescaped-markup/prism-unescaped-markup.min.js"></script>
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="JavaScript/common.js"></script>
     <script src="JavaScript/particleJS.js"></script>

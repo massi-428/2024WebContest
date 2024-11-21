@@ -1,6 +1,7 @@
 * {
 	box-sizing: border-box;
 	--main-gradation-theme: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	--sub-gradation-theme: linear-gradient(60deg, #344558 0%, #6e7d8c 100%);
 }
 
 body {
@@ -108,18 +109,36 @@ section {
 	position: relative;
 	top: 0;
 	padding: calc(2% + 1.5vh);
+	counter-reset: numbering 0;
+
+	.numbering {
+		counter-increment: numbering 1;
+	}
 
 	> h2 {
 		width: fit-content;
 		margin: 2.5% 0;
 		font-size: calc(1em + 2vw);
+		font-family: "Makinas-Flat", sans-serif;
 		background: var(--main-gradation-theme);
         background-clip: text;
         color: transparent;
-		font-family: "Makinas-Flat", sans-serif;
 
 		&::before {
 			content: "≫";
+		}
+	}
+
+	> h3.numbering {
+		font-size: calc(1em + 1vw);
+		font-family: "LINESeedJP";
+		font-weight: 700;
+		background: var(--sub-gradation-theme);
+        background-clip: text;
+        color: transparent;
+
+		&::before {
+			content: counter(numbering) ". ";
 		}
 	}
 
@@ -131,10 +150,19 @@ section {
 		font-weight: 400;
 		line-height: 2em;
 		letter-spacing: 0.125em;
-		color: #29323c;		
+		color: #29323c;
+		
+		> code {
+			font-size: 0.9em;
+			font-family: "FiraCode", "LINESeedJP";
+			letter-spacing: 0;
+			background-color: #f5f2f0;
+			padding: 0.25em 0.75em;
+			border-radius: 5px;
+		}
 	}
 
-	>li{
+	> li {
 		font-family: "LINESeedJP",sans-serif;
 		font-weight: 400;
 	}
@@ -150,6 +178,11 @@ footer {
 #particles-js {
 	position: fixed;
 	filter: blur(2px);
+}
+
+/* prism.js のカスタマイズ */
+code[class*=language-], pre[class*=language-] {
+	font-family: "FiraCode", "LineSeedJP";
 }
 
 @font-face {
@@ -188,6 +221,6 @@ footer {
 }
 
 @font-face {
-	font-family: FinaCode;
+	font-family: FiraCode;
 	src: url(../Fonts/FiraCode-SemiBold.woff2) format(woff2);
 }
