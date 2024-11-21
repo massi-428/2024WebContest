@@ -5,7 +5,9 @@
         <title>code.from(zero);</title>
         <meta name="description" content="プログラミングを─ゼロ─から。さあコーディングを始めよう。">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="../CSS/index.css">
+        <link rel="stylesheet" type="text/css" href="CSS/particleJS.css">
+        <link rel="stylesheet" type="text/css" href="CSS/style.css">
+        <link rel="stylesheet" type="text/css" href="CSS/index.css">
     </head>
     <body>
         <!-- ロード画面 -->
@@ -33,6 +35,7 @@
         </div>
     </main>
     <!-- 各セクション -->
+    <section>
         <h2>参考文献および使用素材</h2>
     <section>
         <h3>ホーム</h3>
@@ -42,45 +45,48 @@
         </ul>
     </section>
     <section>
-        <h3>C言語</h3>
-        <ul>
-            <li>プログラミング言語C 第二版 B.W.カーニハン/D.M.リッチー 著石田晴久 訳 第二章 データ型・演算子・式から(43p~)</li>
-            <li>Cの絵本 C言語が好きになる9つの扉 (株) アンク 著 主に第五章関数から (90p~)</li>
-            <li>改定新C言語入門 ビギナー編 林晴比古著 主にチャプター1 最初に覚えることから (2p~)</li>
-            <li><a href="https://products.sint.co.jp/topsic/blog/c">C言語入門：基本概念を超シンプルに解説！</a></li>
-        </ul>
-        <h3>Rust</h3>
-        <ul>
-            <li><a href="https://qiita.com/shikuno_dev/items/d8b832294b152877b80d">Rust の学習に役立つサイト</a></li>
-            <li><a href="https://ja.wikipedia.org/wiki/Rust_(プログラミング言語)">Rust (プログラミング言語)</a></li>
-            <li><a href="https://tourofRust.com/05_ja.html">Rustツアー</a></li>
-            <li><a href="https://doc.Rust-jp.rs/book-ja/title-page.html">The Rust Programming Language 日本語版</a></li>
-        </ul>
-        <h3>Java</h3>
-        <ul>
-            <li><a href="https://www.javadrive.jp/start/for/index2.html">JavaDrive for文を使った繰り返し処理</a></li>
-            <li><a href="https://uxmilk.jp/48801">Javaで文字列を出力する：print(), println()</a></li>
-            <li><a href="https://qiita.com/nukoxo/items/cb2a1413b22ac67bc737">Java ~四則演算~</a></li>
-            <li><a href="https://www.javadrive.jp/start/var/index1.html">JavaDrive Javaにおける変数とは</a></li>
-            <li><a href="https://qiita.com/morioheisei/items/3d27e82d6cd88068dded">【Java入門】変数と型について（変数の宣言、初期化、データ型）</a></li>
-            <li><a href="https://x-tech.pasona.co.jp/media/detail.html?p=2610">【入門】Javaとは？言語の特徴やプログラミングの流れをわかりやすく解説！</a></li>
-        </ul>
-        <h3>Python</h3>
-        <ul>
-            <li><a href="https://www.rd.ntt/se/media/article/0074.html">Pythonとは？特徴や世の中における活用事例、学習方法について解説</a></li>
-            <li><a href="https://itc.tokyo/python/python-variable/">【Python】変数の定義方法から役割、注意点までコード付きで解説</a></li>
-            <li><a href="https://techgrowup.net/python-variables/">Python開発入門3 Pythonの変数とは？初心者向けに基本から詳しく解説</a></li>
-            <li><a href="https://www.kikagaku.co.jp/kikagaku-blog/python-if-else-elif/">【Python 入門】条件分岐の基本である if 文の使い方をわかりやすく解説！else/elif も紹介</a></li>
-            <li><a href="https://udemy.benesse.co.jp/development/python-work/python-for.html">【Python入門】for文の使い方は？繰り返し処理の書き方や応用方法</a></li>
-            <li><a href="https://www.sejuku.net/blog/22611">Pythonで文字列を出力するprint関数の使い方まとめ</a></li>
-            <li><a href="https://www.javadrive.jp/python/num/index2.html#google_vignette">JavaDrive 四則演算に関する演算子</a></li>
-            <li><a href="https://www.kikagaku.co.jp/kikagaku-blog/python-while/">【Python 入門】while 文の使い方を解説！else, break, continue も！</a></li>
-        </ul>
+            <h3>C言語</h3>
+            <ul>
+                <li>プログラミング言語C 第二版 B.W.カーニハン/D.M.リッチー 著石田晴久 訳 第二章 データ型・演算子・式から(43p~)</li>
+                <li>Cの絵本 C言語が好きになる9つの扉 (株) アンク 著 主に第五章関数から (90p~)</li>
+                <li>改定新C言語入門 ビギナー編 林晴比古著 主にチャプター1 最初に覚えることから (2p~)</li>
+                <li><a href="https://products.sint.co.jp/topsic/blog/c">C言語入門：基本概念を超シンプルに解説！</a></li>
+            </ul>
+            <h3>Rust</h3>
+            <ul>
+                <li><a href="https://qiita.com/shikuno_dev/items/d8b832294b152877b80d">Rust の学習に役立つサイト</a></li>
+                <li><a href="https://ja.wikipedia.org/wiki/Rust_(プログラミング言語)">Rust (プログラミング言語)</a></li>
+                <li><a href="https://tourofRust.com/05_ja.html">Rustツアー</a></li>
+                <li><a href="https://doc.Rust-jp.rs/book-ja/title-page.html">The Rust Programming Language 日本語版</a></li>
+            </ul>
+            <h3>Java</h3>
+            <ul>
+                <li><a href="https://www.javadrive.jp/start/for/index2.html">JavaDrive for文を使った繰り返し処理</a></li>
+                <li><a href="https://uxmilk.jp/48801">Javaで文字列を出力する：print(), println()</a></li>
+                <li><a href="https://qiita.com/nukoxo/items/cb2a1413b22ac67bc737">Java ~四則演算~</a></li>
+                <li><a href="https://www.javadrive.jp/start/var/index1.html">JavaDrive Javaにおける変数とは</a></li>
+                <li><a href="https://qiita.com/morioheisei/items/3d27e82d6cd88068dded">【Java入門】変数と型について（変数の宣言、初期化、データ型）</a></li>
+                <li><a href="https://x-tech.pasona.co.jp/media/detail.html?p=2610">【入門】Javaとは？言語の特徴やプログラミングの流れをわかりやすく解説！</a></li>
+            </ul>
+            <h3>Python</h3>
+            <ul>
+                <li><a href="https://www.rd.ntt/se/media/article/0074.html">Pythonとは？特徴や世の中における活用事例、学習方法について解説</a></li>
+                <li><a href="https://itc.tokyo/python/python-variable/">【Python】変数の定義方法から役割、注意点までコード付きで解説</a></li>
+                <li><a href="https://techgrowup.net/python-variables/">Python開発入門3 Pythonの変数とは？初心者向けに基本から詳しく解説</a></li>
+                <li><a href="https://www.kikagaku.co.jp/kikagaku-blog/python-if-else-elif/">【Python 入門】条件分岐の基本である if 文の使い方をわかりやすく解説！else/elif も紹介</a></li>
+                <li><a href="https://udemy.benesse.co.jp/development/python-work/python-for.html">【Python入門】for文の使い方は？繰り返し処理の書き方や応用方法</a></li>
+                <li><a href="https://www.sejuku.net/blog/22611">Pythonで文字列を出力するprint関数の使い方まとめ</a></li>
+                <li><a href="https://www.javadrive.jp/python/num/index2.html#google_vignette">JavaDrive 四則演算に関する演算子</a></li>
+                <li><a href="https://www.kikagaku.co.jp/kikagaku-blog/python-while/">【Python 入門】while 文の使い方を解説！else, break, continue も！</a></li>
+            </ul>
+        </section>
     </section>
     <footer>
         このサイトはWebコンテスト用です
     </footer>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="/JavaScript/index.js"></script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="JavaScript/index.js" type="module"></script>
+    <script src="JavaScript/common.js"></script>
+    <script src="JavaScript/particleJS.js"></script>
     </body>
 </html>
