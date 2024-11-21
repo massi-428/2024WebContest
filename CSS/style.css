@@ -162,9 +162,12 @@ section {
 		}
 	}
 
-	> li {
-		font-family: "LINESeedJP",sans-serif;
-		font-weight: 400;
+	> ul > li {
+		font-size: calc(0.3em + 1.25vw);
+        font-family: "LINESeedJP", sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        margin: 0.75em 0;
 	}
 }
 

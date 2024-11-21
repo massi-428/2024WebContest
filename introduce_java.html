@@ -6,6 +6,10 @@
     <title>code.from(zero)</title>
     <meta name="description" content="プログラミングを─ゼロ─から。さあコーディングを始めよう。">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/plugins/unescaped-markup/prism-unescaped-markup.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/plugins/line-highlight/prism-line-highlight.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="CSS/particleJS.css">
     <link rel="stylesheet" type="text/css" href="/CSS/style.css">
     <link rel="stylesheet" type="text/css" href="/CSS/introduce.css">
@@ -29,9 +33,9 @@
     </header>
     <main>
         <div>
-            <h1>Java</h1>
-            <h2>JAVA</h2>
-            <p>多くの組み込みで利用される人気の言語を知ろう。</p>
+            <h1>JAVA</h1>
+            <h2>Java</h2>
+            <p>多くの組み込みで利用される言語を学ぼう。</p>
         </div>
         <img src="Images/logo.svg">
         <span class="apex-border top"></span>
@@ -39,85 +43,92 @@
         <span class="apex-border right"></span>
         <span class="apex-border bottom"></span>
     </main>
+
     <section>
         <h2>Javaの特徴</h2>
-        <p>
-            JavaはC言語をベースに開発されたプログラミング言語です。また、Googleが開発に用いる三大言語の1つとしても知られています。
-            Javaで記述されたプログラムは家電の組み込みやAndroid向けのスマホアプリ、金融機関の基幹システムなどに採用されています。<br>
-            Javaは実行環境の自由度が高く、一度書いたコードはJVMを通してどんなコンピュータでも使えるため、プラットフォームを問わず実行できます。<br>
-            またJavaは、ソースコードをパソコンなどの機械が理解可能な言語に翻訳してから、処理が実行されるコンパイラ言語です。そのため処理速度が速く安定しており、基幹システムや組み込みでの使用にも耐えるため、重要なシステムを開発する点において大きなメリットといえます。
-        </p>
+        <p>JavaはC言語をベースに開発されたプログラミング言語です。また、Googleが開発に用いる三大言語の1つとしても知られています。</p>
+        <p>Javaで記述されたプログラムは家電の組み込みやAndroid向けのスマホアプリ、金融機関の基幹システムなどに採用されています。</p>
+        <p>Javaは実行環境の自由度が高く、一度書いたコードはJVM (Java Virtual Machine) を通してどんなコンピュータでも使えるため、プラットフォームを問わず実行できます。</p>
+        <p>またJavaは、ソースコードをパソコンなどの機械が理解可能な言語に翻訳してから、処理が実行されるコンパイラ言語です。そのため処理速度が速く安定しており、基幹システムや組み込みでの使用にも耐えるため、重要なシステムを開発する点において大きなメリットといえます。</p>
     </section>
+
     <section>
         <h2>変数についての説明（宣言など）</h2>
         <p>
-            まず、変数とはなにかですが、変数とは、プログラム内で使用するデータを保持するためのいわば入れ物のようなものです。<br>
+            まず、変数とは、プログラム内で使用するデータを保持するための、いわば入れ物のようなものです。<br>
             この入れ物には、数値や文字列などを保管することができ、保管した値をとりだして参照するなどといったことができます。
-            他の変数との区別をつけるためにJavaにおいては、変数を宣言する際には
         </p>
-            <ul>
-                <li>数値や文字列など、どんな値が格納されるのか</li>
-                <li>どんな名前にするのか</li>
-                <li>最初に格納する値は何なのか</li>
-            </ul>
+        <p>他の変数との区別をつけるためにJavaにおいては、変数を宣言する際には、</p>
+        <ul>
+            <li>数値や文字列など、どんな値が格納されるのか</li>
+            <li>どんな名前にするのか</li>
+            <li>最初に格納する値は何なのか</li>
+        </ul>
         <p>という点に気を付けなければなりません。</p>
-
+    </section>
+    <section>
         <h2>変数の宣言</h2>
         <p>
             変数の宣言をする際には
-            データ型 変数名;<br>
-            とする必要があります。<br>
-            <br>
+            <code>データ型 変数名;</code>
+            とする必要があります。
         </p>
-        <pre>int webcon<br>    webcon = 1<br></pre>
-        <br>
-        <p>
-            というように変数名(上記の場合は<code>webcon</code>)を宣言し、そこに値を代入して初期化することで変数を扱うことができます。<br>
+        <script type="text/plain" class="language-java line-numbers">int integer;
+integer = 30;</script>
+        <p>というように変数名 (上記の場合は<code>integer</code>) を宣言し、そこに値を代入して初期化することで変数を扱うことができます。</p>
+        <p>    
             また、変数のデータ型にも様々な種類があります。<br>
-            ここでは基本的に使う頻度が多い「<code>int</code>」、「<code>double</code>」、「<code>String</code>」についての説明を簡単に行います。<br>
-            はじめに、<code>int</code>についてですが、<code>int</code>とは整数を格納するための変数です。わかりやすく例でしめすと、<br>
+            ここでは基本的に使う頻度が多い<code>int</code>、<code>float</code>、<code>String</code>についての説明を簡単に行います。<br>
+            はじめに、<code>int</code>についてですが、<code>int</code>とは整数を格納するためのデータ型です。わかりやすく例で示すと、
         </p>
-        <pre>int result = 1</pre>
+        <script type="text/plain" class="language-java line-numbers">int result = 1;</script>
         <p>
-            このように記入した場合、「resultは1となる。」となります。整数の値を代入するときは<code>int</code>を使用します。<br>
-            整数ときたらお次は少数の<code>double</code>です。<code>double</code>は少数を格納するための変数です。<br>
+            このように記入した場合、<code>result</code>の中に入る値は1となります。<br>
+            整数ときたら、お次は少数の<code>float</code>です。<code>float</code>は少数を格納するためのデータ型です。<br>
         </p>
-        <pre>double k = 1.23</pre>
+        <script type="text/plain" class="language-java line-numbers">float factor = 1.23f;</script>
         <p>
-            このように記入した場合、「kは1.23となる。」となります。<br>
-            そして、<code>String</code>についてですが、<code>String</code>はほかの2つとはちょっと違い、文字列を代入するためのものです。<br>
-            <br>
+            このように記入した場合、<code>factor</code>には1.23が代入されます。<br>
+            また、<code>float</code>型では、数値の末尾に<code>f</code>を付ける必要があるので注意してください。
         </p>
-        <pre>String name; name = "Webコン"<br></pre>
-        上のようにコードを書くことで<code>String</code>に対して、「Webコン」という文字列を代入することができます。
-        <h2>HelloWorld(コンソールに出力する系統のコードの説明)</h2>
         <p>
-            次に、文字を入出力するときに使う関数についてです。<br>
-            <code>Java</code>の場合、<code>print</code>、<code>println</code>という関数を使用します。2つの関数の使い方は以下の通りです。<br>
-            <br>
+            そして、<code>String</code>についてですが、
+            これは、ほかの2つとはちょっと違い、文字列を代入するためのものです。
         </p>
-        <pre>System.out.print(表示する内容)<br>System.out.println(表示する内容)</pre>
-        <p>
-            2つの関数の違いについてですが、<code>print</code>は末尾に改行が付きませんが、<code>println</code>には末尾に自動的に改行がつくという違いがあります。<br>
-        </p>
+        <script type="text/plain" class="language-java line-numbers">String name;
+name = "Webコン";</script>
+        <p>上のようにコードを書くことで、<code>name</code>に対して、<code>"Webコン"</code>という文字列を代入することができます。</p>
     </section>
     <section>
-        <h2>四則演算</h2>
+        <h2>Hello World! (コンソールに出力する関数の説明)</h2>
         <p>
-            加算・減算・乗算・除算の四則計算と知っててうれしい+αを紹介します。<br>
-            加算は<code>+</code>、減算は<code>-</code>、乗算は<code>*</code>、除算は<code>/</code>とそれぞれに算術演算子となるものが存在します。<br>
-            また、<code>+1</code>や<code>-1</code>を入力するのが面倒くさいなと思ったら、それぞれ<code>++</code>、<code>--</code>という風にすることができます。<br>
+            次に、文字を出力するときに使う関数についてです。<br>
+            Javaの場合、<code>System.out.print()</code>、<code>System.out.println()</code>という関数を使用します。
+            2つの関数の使い方は以下の通りです。
+        </p>
+        <script type="text/plain" class="language-java line-numbers">System.out.print(表示する内容);
+System.out.println(表示する内容);</script>
+        <p>
+            2つの関数の違いについてですが、<code>print</code>は末尾に改行が付きませんが、<code>println</code>には末尾に自動的に改行がつくという違いがあります。
+        </p>
+    </section>
+
+    <section>
+        <h2>四則演算</h2>
+        <p>加算・減算・乗算・除算の四則計算と、知っておくとうれしい+αを紹介します。</p>
+        <p>
+            加算は<code>+</code>、減算は<code>-</code>、乗算は<code>*</code>、除算は<code>/</code>と、それぞれに算術演算子なるものが存在します。<br>
             そして数字だけでなく文字列も連携することができます。
         </p>
-        <pre> webcon1 = 75;<br>int webcon2 = 3;<br></pre>
+        <script type="text/plain" class="language-java line-numbers"> webcon1 = 75;<br>int webcon2 = 3;<br></script>
         <p>
             と入力し、その後<br>
         </p>
-        <pre> result = webcon1 + webcon2;<br></pre>
+        <script type="text/plain" class="language-java line-numbers"> result = webcon1 + webcon2;<br></script>
         <p>
             と入力をすると結果は<br>
         </p>
-        <pre>result = 78;<br></pre>
+        <script type="text/plain" class="language-java line-numbers">result = 78;<br></script>
         <p>
             となります。<br>
         </p>
@@ -129,12 +140,12 @@
             条件分岐はプログラミングにおけるもっとも大切なことの1つなのでしっかり覚えましょう。<br>
             <code>if</code>文の書き方は以下のように書きます。<br>
         </p>
-        <pre>if(条件式){<br>    //条件式が真の場合の処理<br>}<br>else{<br>    //条件式が偽の場合の処理<br>}<br></pre>
+        <script type="text/plain" class="language-java line-numbers">if(条件式){<br>    //条件式が真の場合の処理<br>}<br>else{<br>    //条件式が偽の場合の処理<br>}<br></script>
         <p>
             パッとみただけではわかりにくいかもしれないので例とともに説明しようと思います。<br>
         </p>
         <br>
-        <pre>public class Main {<br>    public static void main(String[] args){<br>        int webcon = 10;<br>        if ( webcon == 10 ){<br>            System.out.println("webconは10です。");<br>        }<br>        else{<br>            System.out.println("webconは10ではありません。");<br>        }<br>    }<br>}</pre>
+        <script type="text/plain" class="language-java line-numbers">public class Main {<br>    public static void main(String[] args){<br>        int webcon = 10;<br>        if ( webcon == 10 ){<br>            System.out.println("webconは10です。");<br>        }<br>        else{<br>            System.out.println("webconは10ではありません。");<br>        }<br>    }<br>}</script>
         <br>
         <p>
             上の例を実行すると、「webconは10です。」と表示されるはずです。<br>
@@ -154,7 +165,7 @@
             <code>for</code>文は指定した回数だけ処理をするときに使われます。<code>for</code>構文は以下のように書きます。<br>
             <br>
         </p>
-        <pre>for( 初期化式; 条件式; 変化式){<br>    繰り返し実行をしたい処理<br>}<br></pre>
+        <script type="text/plain" class="language-java line-numbers">for( 初期化式; 条件式; 変化式){<br>    繰り返し実行をしたい処理<br>}<br></script>
         <br>
         <p>
             初期化式、条件式、変化式についてよくわからないと思うので、1つずつ解説していきます。<br>
@@ -166,7 +177,7 @@
             言葉では難しいと思うので例を下に書いて説明しようと思います。<br>
             <br>
         </p>
-        <pre>for (int webcon = 0; webcon &lt; 2; webcon++){<br>    System.out.println("webcon=" + webcon);<br>}<br></pre>
+        <script type="text/plain" class="language-java line-numbers">for (int webcon = 0; webcon &lt; 2; webcon++){<br>    System.out.println("webcon=" + webcon);<br>}<br></script>
         <br>
         <p>
             このように入力した場合以下のような手順で処理が実行されます。<br>
@@ -195,8 +206,20 @@
         </p>
     </section>
     <footer>このサイトはWebコンテスト用です</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/plugins/line-highlight/prism-line-highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/plugins/unescaped-markup/prism-unescaped-markup.min.js"></script>
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="JavaScript/common.js"></script>
     <script src="JavaScript/particleJS.js"></script>
 </body>
+
+<style>
+    main {
+        background-image: url(../Images/bg_c.jpg);
+    }
+</style>
+
 </html>
