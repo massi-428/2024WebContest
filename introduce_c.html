@@ -77,10 +77,10 @@
         <p>以下に示すのがプログラミング学習の基本、実行すると「Hello World!」と文字列が表示されるプログラムです。</p>
         <script type="text/plain" class="language-c line-numbers">#include <stdio.h>
 
-int main() {
-    printf("Hello, World!\n");
-    return 0;
-}</script>
+ int main() {
+     printf("Hello, World!\n");
+     return 0;
+ }</script>
         <p>
             今はこれだけ見てもどのような仕組みになっているかわからないと思うかもしれませんが、
             ここからの解説を通してこのプログラムに含まれる各要素の意味を少しずつ理解してもらえたらなと思います。
@@ -107,7 +107,7 @@ int main() {
         </p>
         <p>変数を使うには、何という変数を使うかの「宣言」を行い、必要に応じて値を「代入」することになります。</p>
         <script type="text/plain" class="language-c line-numbers">int level;         // 変数を宣言
-level = 18;         // 値を代入</script>
+ level = 18;         // 値を代入</script>
         <br>
         <script type="text/plain" class="language-c line-numbers">float price = 12.5;  // 宣言と同時に代入</script>
         <p>
@@ -137,7 +137,7 @@ level = 18;         // 値を代入</script>
         <p>このような変数が実際にゲームのプログラムなどでも使われています。</p>
         <p>ちなみに余談ですが、char型を応用すれば文字列を格納することができます。</p>
         <script type="text/plain" class="language-c line-numbers">char playerName[20]; // プレイヤー名のメモリを最大20文字で確保<br>
-playerName = "Dr.WebContest"; // プレイヤー名を20文字まで入力できる</script>
+ playerName = "Dr.WebContest"; // プレイヤー名を20文字まで入力できる</script>
         <p>このようにしてメモリを確保してそのメモリに実際のプレイヤー名を代入することで複数文字、言い換えれば「文字列」を格納することができます。</p>
         <p>
             この場合文字列を<code>"</code>（ダブルクォーテーション）で囲む必要があります。また、最大20文字というのは英数字などの半角文字のみに限り、

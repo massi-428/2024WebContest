@@ -153,7 +153,7 @@ section {
 		color: #29323c;
 	}
 
-	> ul > li {
+	> ul > li, > ol > li {
 		font-size: calc(0.3em + 1.25vw);
         font-family: "LINESeedJP", sans-serif;
         font-weight: 400;

@@ -74,7 +74,7 @@
             とする必要があります。
         </p>
         <script type="text/plain" class="language-java line-numbers">int integer;
-integer = 30;</script>
+ integer = 30;</script>
         <p>というように変数名 (上記の場合は<code>integer</code>) を宣言し、そこに値を代入して初期化することで変数を扱うことができます。</p>
         <p>    
             また、変数のデータ型にも様々な種類があります。<br>
@@ -96,7 +96,7 @@ integer = 30;</script>
             これは、ほかの2つとはちょっと違い、文字列を代入するためのものです。
         </p>
         <script type="text/plain" class="language-java line-numbers">String name;
-name = "Webコン";</script>
+ name = "Webコン";</script>
         <p>上のようにコードを書くことで、<code>name</code>に対して、<code>"Webコン"</code>という文字列を代入することができます。</p>
     </section>
     <section>
@@ -106,8 +106,8 @@ name = "Webコン";</script>
             Javaの場合、<code>System.out.print()</code>、<code>System.out.println()</code>という関数を使用します。
             2つの関数の使い方は以下の通りです。
         </p>
-        <script type="text/plain" class="language-java line-numbers">System.out.print(表示する内容);
-System.out.println(表示する内容);</script>
+        <script type="text/plain" class="language-java line-numbers">System.out.print("Hello World!");
+ System.out.println("Hello World!");</script>
         <p>
             2つの関数の違いについてですが、<code>print</code>は末尾に改行が付きませんが、<code>println</code>には末尾に自動的に改行がつくという違いがあります。
         </p>
@@ -121,7 +121,7 @@ System.out.println(表示する内容);</script>
             そして数字だけでなく文字列も連携することができます。
         </p>
         <script type="text/plain" class="language-java line-numbers">int a = 75;
-int b = 3;</script>
+ int b = 3;</script>
         <p>と記述し、その後、</p>
         <script type="text/plain" class="language-java line-numbers">int sum = a + b;</script>
         <p>と記述をすると結果は<code>sum</code>は78となります。</p>
@@ -135,23 +135,23 @@ int b = 3;</script>
             <code>if</code>文の書き方は以下のように書きます。
         </p>
         <script type="text/plain" class="language-java line-numbers">if (条件式)
-{
-    // 条件式が真の場合の処理
-}
-else
-{
-    // 条件式が偽の場合の処理
-}</script>
+ {
+     // 条件式が真の場合の処理
+ }
+ else
+ {
+     // 条件式が偽の場合の処理
+ }</script>
         <p>パッとみただけではわかりにくいかもしれないので例とともに説明します。</p>
         <script type="text/plain" class="language-java line-numbers">int webcon = 10;
-if (webcon == 10)
-{
-    System.out.println("webconは10です。");
-}
-else
-{
-    System.out.println("webconは10ではありません。");
-}</script>
+ if (webcon == 10)
+ {
+     System.out.println("webconは10です。");
+ }
+ else
+ {
+     System.out.println("webconは10ではありません。");
+ }</script>
         <p>
             上の例を実行すると、「webconは10です。」と表示されるはずです。<br>
             上の例は、<code>webcon</code>に書かれた数を10かそれ以外かを判別し、10の場合は<br>
@@ -173,9 +173,9 @@ else
             <br>
         </p>
         <script type="text/plain" class="language-java line-numbers">for (初期化式; 条件式; 変化式)
-{
-    // 繰り返し実行をしたい処理
-}</script>
+ {
+     // 繰り返し実行をしたい処理
+ }</script>
         <p>初期化式、条件式、変化式についてよくわからないと思うので、1つずつ解説していきます。</p>
         <h3 class="numbering">初期化式</h3>
         <p>
@@ -195,9 +195,9 @@ else
             言葉では難しいと思うので例を下に書いて説明しようと思います。
         </p>
         <script type="text/plain" class="language-java line-numbers">for (int i = 0; i < 2; i++)
-{
-    System.out.println("i = " + i);
-}</script>
+ {
+     System.out.println("i = " + i);
+ }</script>
         <p>なお、<code>i++</code>は「<code>i</code>の値を今より1増やす」と言う意味です。</p>
         <p>このように入力した場合以下のような手順で処理が実行されます。</p>
         <ol>
@@ -206,21 +206,21 @@ else
             <li>ブロック内の処理を実行 (画面に変数<code>i</code>の値を出力)</li>
             <li>繰り返しの1回目終了</li>
             <li>変化式で変数<code>i</code>に格納されている値を1増加させる (このとき<code>i = 1</code>)</li>
-            <li>条件式を評価 <code>webcon &lt; 2</code>は条件を満たすので繰り返しを実行</li>
-            <li>ブロック内の処理を実行(画面に変数 <code>webcon</code> の値を出力)</li>
+            <li>条件式を評価 <code>webcon &lt; 2</code>はまだ条件を満たすので繰り返しを実行</li>
+            <li>ブロック内の処理を実行(画面に変数 <code>i</code> の値を出力)</li>
             <li>繰り返しの2回目終了</li>
-            <li>変化式で変数 <code>webcon</code>に格納されている値を1増加(<code>webcon = 2</code>)</li>
-            <li>条件式を評価 <code>webcon &lt; 2</code>は条件を満たしていないので繰り返しを終了</li>
+            <li>変化式で変数 <code>i</code>に格納されている値を1増加させる (このとき<code>i = 2</code>)</li>
+            <li>条件式を評価 <code>i &lt; 2</code>は条件を満たしていないので繰り返しを終了</li>
         </ol>
-            結果的に繰り返し処理は2回行われ、それぞれ <code>webcon = 0</code>と<code>webcon = 1</code>を画面に出力します。<br>
-            <code>if</code>構文と一緒に覚えることでできることがとても増えるので是非覚えてほしいです。(2回目)<br>
-        </p>
+        <p>結果的に繰り返し処理は2回行われ、それぞれ「i = 0」と「i = 1」を画面に出力します。</p>
+        <p><code>if</code>構文と一緒に覚えることで、できることがとても増えるので是非覚えてほしいです。(2回目)<br></p>
     </section>
+
     <section>
         <h2>終わりに</h2>
         <p>
-            Javaについて、理解いただけましたでしょうか?私自身あまりJavaに詳しくないですが、今後Javaを触るためのきっかけになれればと思います。<br>
-            プログラミングがあまり得意でない私でも理解できたので「プログラミングを始めたい！」と思う方はJavaから始めて見てはと考えました。<br>
+            Javaについて、理解いただけましたでしょうか？私自身あまりJavaに詳しくないですが、今後Javaを触るためのきっかけになれればと思います。<br>
+            プログラミングがあまり得意でない私でも理解できたので、「プログラミングを始めたい！」と思う方はJavaから始めて見てはどうでしょうか。<br>
         </p>
     </section>
     <footer>このサイトはWebコンテスト用です</footer>
