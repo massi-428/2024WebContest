@@ -60,70 +60,108 @@
             </p>
             </section>
             <section>
-            <h2>早速実践</h2>
-            <h3>~宣言について~</h3>
+            <h2>宣言について</h2>
             <p>
                 宣言には<code>let</code>を使います。<br>
                 Rustでは、変数宣言には<code>mut</code>をつけます。<code>mut</code>無しでも勝手に変数宣言として扱ってくれますが、見やすいコードを書くために<code>mut</code>をつけましょう。<br>
             </p>
-            <pre>let mut x;</pre>
+<pre>
+let mut x;
+</pre>
             <p>
                 また、変数型のほかに定数型が存在します。<br>
                 整数型では、符号付きか符号なしかを選べ、明示的なサイズを持ちます。<br>
                 また、可変,不変の設定も行うことができ、不変の設定を行うと、プログラムが予期しない動作を起こしたときにエラーを吐いてくれます。<br>
             </p>
-            <h3>~テキストを入出力するための関数~</h3>
+            </section>
+            <section>
+            <h2>テキストを入出力するための関数</h2>
             <p>
-                基本的にはC言語と大差ありません。<br>
+                基本的にはC言語と大差ありません。
+            </p>
+            <p>
                 <code>printf</code>が<code>print!</code>になっただけです。<br>
                 かっこの中身もほぼ変わっていませんし、同じと言っても過言ではないでしょう。<br>
             </p>
-            <pre>print!("xの値は{}です。",x);</pre>
-            <h3>~四則演算~</h3>
+<pre>
+print!("xの値は{}です。",x);
+</pre>
+            </section>
+            <section>
+            <h2>四則演算</h2>
             <p>
                 こちらもC言語と大差ありません。<br>
             </p>
-            <pre>x=1+2;</pre>
-            <pre>y=10%3;</pre>
+<pre>
+x=1+2;
+</pre>
+<pre>
+y=10%3;
+</pre>
             <p>
                 あらかじめ用意していた変数に<code>+</code>,<code>-</code>,<code>*</code>,<code>/</code>,<code>%</code>などを使って導き出した計算結果を代入します。<br>
                 ただし、変数を事前に用意していないとしっかりエラーを吐きます。<br>
             </p>
-            <h3>~if文に類するコード~</h3>
-            <pre>if a in b{print!("aとbは同じ値です。");}</pre>
-            <pre>else if a!=c{print!("aとcは同じではありません。");}</pre>
-            <pre>else{print!("えるす。");}</pre>
+            </section>
+            <section>
+            <h2>if文に類するコード</h2>
+<pre>
+if a in b{
+    print!("aとbは同じ値です。");
+}
+
+else if a!=c{
+    print!("aとcは同じではありません。");
+}
+
+else{
+    print!("えるす。");
+}
+</pre>
             <p>
                 こちらはC言語とは打って変わって、どちらかといえばpython寄りのコードとなっています。 <br>
                 基本的な動作としては<code>if 条件{条件に合致した時の動作};</code>と、他の言語と同じような概要です。 <br>
             </p>
-            <h3>~ループに類するコード~</h3>
+            </section>
+            <section>
+            <h2>ループに類するコード</h2>
             <p>
                 <code>for</code>,<code>while</code>は存在します。
             </p>
-            <pre>for a in b{print!("aはbより小さいです。");}</pre>
-            <pre>while a==0{print!("aは0です。");}</pre>
+<pre>
+for a in b{
+    print!("aはbより小さいです。");
+}
+</pre>
+<pre>
+while a==0{
+    print!("aは0です。");
+}
+</pre>
             <p>
                 使い方は変わりませんが、条件文はちょっとpython似です。<br>
                 <br>
                 また、Rustには<code>loop</code>という関数が存在します。<br>
                 最も簡単なループ文(終了条件もループ条件も書かれていないコード)を書くとき、<br>
             </p>
-            <pre>loop{print!("るーぷ")};</pre>
+<pre>
+loop{
+    print!("るーぷ")
+};
+</pre>
             <p>
                 これだけでループ文が完成します。<br>
                 簡単なコードがあって便利ですね。<br>
             </p>
-            <h3>~Rustを学んだ感想~</h3>
+            </section>
+            <section>
+            <h2>おわりに</h2>
             <p>
                 自分はC言語を事前に修得していたので、似ている部分も多く、分かりやすかったです。<br>
                 Rustを学ぶメリットもしっかりと存在していて、コードの構成がわかりやすく、書きやすい。そういう印象を持ちました。<br>
-                楽しかったです。<br>
                 また時間が空いたときにでもRustを時間をかけて勉強しなおしたいです！ <br>
             </p>
-            <p>
-        </section>
-    </main>
+            </section>
     <footer>
         このサイトはWebコンテスト用です
     </footer>
