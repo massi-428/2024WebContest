@@ -63,103 +63,85 @@
             <h2>宣言について</h2>
             <p>
                 宣言には<code>let</code>を使います。<br>
-                Rustでは、変数宣言には<code>mut</code>をつけます。<code>mut</code>無しでも勝手に変数宣言として扱ってくれますが、見やすいコードを書くために<code>mut</code>をつけましょう。<br>
+                Rustでは、値を後から変更できる変数を使うための宣言に、<code>mut</code>をつけます。<code>mut</code>無しでも勝手に変数宣言として扱ってくれますが、見やすいコードを書くために<code>mut</code>をつけましょう。<br>
             </p>
-<pre>
-let mut x;
-</pre>
-            <p>
-                また、変数型のほかに定数型が存在します。<br>
-                整数型では、符号付きか符号なしかを選べ、明示的なサイズを持ちます。<br>
-                また、可変,不変の設定も行うことができ、不変の設定を行うと、プログラムが予期しない動作を起こしたときにエラーを吐いてくれます。<br>
+<script type="text/plain" class="language-rust line-numbers">let mut x;</script>
+            <p>また、変数型のほかに、後から値を変更できない定数型が存在します。</p>
+            <p>整数型では、符号付きか符号なしかを選べ、明示的なサイズを持ちます。</p>
+            <p>また、可変、不変の設定も行うことができ、不変の設定を行うと、プログラムが予期しない動作を起こしたときにエラーを吐いてくれます。</p>
             </p>
             </section>
             <section>
             <h2>テキストを入出力するための関数</h2>
-            <p>
-                基本的にはC言語と大差ありません。
-            </p>
+            <p>基本的にはC言語と大差ありません。</p>
             <p>
                 <code>printf</code>が<code>print!</code>になっただけです。<br>
                 かっこの中身もほぼ変わっていませんし、同じと言っても過言ではないでしょう。<br>
             </p>
-<pre>
-print!("xの値は{}です。",x);
-</pre>
+<script type="text/plain" class="language-rust line-numbers">print!("xの値は{}です。", x);</script>
             </section>
+            
             <section>
             <h2>四則演算</h2>
-            <p>
-                こちらもC言語と大差ありません。<br>
-            </p>
-<pre>
-x=1+2;
-</pre>
-<pre>
-y=10%3;
-</pre>
+            <p>こちらもC言語と大差ありません。</p>
+<script type="text/plain" class="language-rust line-numbers">x = 1 + 2;</script>
+<script type="text/plain" class="language-rust line-numbers">y = 10 % 3;</script>
             <p>
                 あらかじめ用意していた変数に<code>+</code>,<code>-</code>,<code>*</code>,<code>/</code>,<code>%</code>などを使って導き出した計算結果を代入します。<br>
-                ただし、変数を事前に用意していないとしっかりエラーを吐きます。<br>
+                ただし、変数を事前に用意していないとしっかりエラーを吐きます。
             </p>
             </section>
+
             <section>
             <h2>if文に類するコード</h2>
-<pre>
-if a in b{
+<script type="text/plain" class="language-rust line-numbers">if a in b {
     print!("aとbは同じ値です。");
 }
 
-else if a!=c{
+else if a != c {
     print!("aとcは同じではありません。");
 }
 
-else{
+else {
     print!("えるす。");
-}
-</pre>
+}</script>
             <p>
-                こちらはC言語とは打って変わって、どちらかといえばpython寄りのコードとなっています。 <br>
-                基本的な動作としては<code>if 条件{条件に合致した時の動作};</code>と、他の言語と同じような概要です。 <br>
+                こちらはC言語とは打って変わって、どちらかといえばPython寄りのコードとなっています。 <br>
+                基本的な動作としては<code>if 条件 { 条件に合致した時の動作 };</code>と、他の言語と同じような概要です。 <br>
             </p>
             </section>
+
             <section>
             <h2>ループに類するコード</h2>
             <p>
-                <code>for</code>,<code>while</code>は存在します。
+                <code>for</code>、<code>while</code>は存在します。
             </p>
-<pre>
-for a in b{
+<script type="text/plain" class="language-rust line-numbers">for a in b {
     print!("aはbより小さいです。");
-}
-</pre>
-<pre>
-while a==0{
+}</script>
+<script type="text/plain" class="language-rust line-numbers">while a == 0 {
     print!("aは0です。");
-}
-</pre>
+}</script>
+            <p>使い方は変わりませんが、条件文はちょっとpython似です。</p>
             <p>
-                使い方は変わりませんが、条件文はちょっとpython似です。<br>
-                <br>
                 また、Rustには<code>loop</code>という関数が存在します。<br>
-                最も簡単なループ文(終了条件もループ条件も書かれていないコード)を書くとき、<br>
+                最も簡単なループ文 (終了条件もループ条件も書かれていないコード) を書くとき、
             </p>
-<pre>
-loop{
-    print!("るーぷ")
-};
-</pre>
+<script type="text/plain" class="language-rust line-numbers">loop {
+    print!("るーぷ");
+}</script>
             <p>
                 これだけでループ文が完成します。<br>
                 簡単なコードがあって便利ですね。<br>
             </p>
             </section>
+
             <section>
             <h2>おわりに</h2>
             <p>
                 自分はC言語を事前に修得していたので、似ている部分も多く、分かりやすかったです。<br>
                 Rustを学ぶメリットもしっかりと存在していて、コードの構成がわかりやすく、書きやすい。そういう印象を持ちました。<br>
-                また時間が空いたときにでもRustを時間をかけて勉強しなおしたいです！ <br>
+                また時間が空いたときにでもRustを時間をかけて勉強しなおしたいです！
             </p>
             </section>
     <footer>
