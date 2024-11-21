@@ -11,6 +11,7 @@ main {
 		position: relative;
 
 		&::after {
+			animation: move-underline 0.5s ease-out forwards;
 			content: "";
             position: absolute;
             bottom: -0.2em;
@@ -64,5 +65,15 @@ main {
 			right: 15px;
 			bottom: 15px;
 		}
+	}
+}
+
+@keyframes move-underline {
+	0% {
+		width: 0;
+	}
+
+	100% {
+		width: calc(100% - 0.4em);
 	}
 }
