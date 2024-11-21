@@ -151,15 +151,6 @@ section {
 		line-height: 2em;
 		letter-spacing: 0.125em;
 		color: #29323c;
-		
-		> code {
-			font-size: 0.9em;
-			font-family: "FiraCode", "LINESeedJP";
-			letter-spacing: 0;
-			background-color: #f5f2f0;
-			padding: 0.25em 0.75em;
-			border-radius: 5px;
-		}
 	}
 
 	> ul > li {
@@ -168,6 +159,15 @@ section {
         font-weight: 400;
         letter-spacing: 0.1em;
         margin: 0.75em 0;
+	}
+
+	code {
+		font-size: 0.9em;
+		font-family: "FiraCode", "LINESeedJP";
+		letter-spacing: 0;
+		background-color: #f5f2f0;
+		padding: 0.25em 0.75em;
+		border-radius: 5px;
 	}
 }
 

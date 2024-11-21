@@ -120,80 +120,98 @@ System.out.println(表示する内容);</script>
             加算は<code>+</code>、減算は<code>-</code>、乗算は<code>*</code>、除算は<code>/</code>と、それぞれに算術演算子なるものが存在します。<br>
             そして数字だけでなく文字列も連携することができます。
         </p>
-        <script type="text/plain" class="language-java line-numbers"> webcon1 = 75;<br>int webcon2 = 3;<br></script>
-        <p>
-            と入力し、その後<br>
-        </p>
-        <script type="text/plain" class="language-java line-numbers"> result = webcon1 + webcon2;<br></script>
-        <p>
-            と入力をすると結果は<br>
-        </p>
-        <script type="text/plain" class="language-java line-numbers">result = 78;<br></script>
-        <p>
-            となります。<br>
-        </p>
+        <script type="text/plain" class="language-java line-numbers">int a = 75;
+int b = 3;</script>
+        <p>と記述し、その後、</p>
+        <script type="text/plain" class="language-java line-numbers">int sum = a + b;</script>
+        <p>と記述をすると結果は<code>sum</code>は78となります。</p>
     </section>
+
     <section>
         <h2>if文に類するコードの説明</h2>
         <p>
-            <code>if</code>構文は英語の通り、「もし、？？だった場合」という条件分岐のことです。<br>
+            <code>if</code>構文は英語の通り、「もし、○○だった場合」という条件分岐のことです。<br>
             条件分岐はプログラミングにおけるもっとも大切なことの1つなのでしっかり覚えましょう。<br>
-            <code>if</code>文の書き方は以下のように書きます。<br>
+            <code>if</code>文の書き方は以下のように書きます。
         </p>
-        <script type="text/plain" class="language-java line-numbers">if(条件式){<br>    //条件式が真の場合の処理<br>}<br>else{<br>    //条件式が偽の場合の処理<br>}<br></script>
-        <p>
-            パッとみただけではわかりにくいかもしれないので例とともに説明しようと思います。<br>
-        </p>
-        <br>
-        <script type="text/plain" class="language-java line-numbers">public class Main {<br>    public static void main(String[] args){<br>        int webcon = 10;<br>        if ( webcon == 10 ){<br>            System.out.println("webconは10です。");<br>        }<br>        else{<br>            System.out.println("webconは10ではありません。");<br>        }<br>    }<br>}</script>
-        <br>
+        <script type="text/plain" class="language-java line-numbers">if (条件式)
+{
+    // 条件式が真の場合の処理
+}
+else
+{
+    // 条件式が偽の場合の処理
+}</script>
+        <p>パッとみただけではわかりにくいかもしれないので例とともに説明します。</p>
+        <script type="text/plain" class="language-java line-numbers">int webcon = 10;
+if (webcon == 10)
+{
+    System.out.println("webconは10です。");
+}
+else
+{
+    System.out.println("webconは10ではありません。");
+}</script>
         <p>
             上の例を実行すると、「webconは10です。」と表示されるはずです。<br>
             上の例は、<code>webcon</code>に書かれた数を10かそれ以外かを判別し、10の場合は<br>
             「webconは10です。」<br>
             それ以外だと<br>
             「webconは10ではありません。」<br>
-            と表示されます。<br>
-            <br>
+            と表示されます。
+        </p>
+        <p>
             このように<code>if</code>文は、こちらが指定した条件に合うものと合わないものをわけることができる優れたものです。<br>
-            プログラミングでできることがとても増えるのでこれを<code>for</code>構文と一緒に覚えましょう。<br>
+            これが使えると、プログラミングでできることがとても増えるので、この後紹介する<code>for</code>構文と一緒に覚えましょう。
         </p>
     </section>
+
     <section>
         <h2>for文に類するコードの説明文</h2>
         <p>
             <code>for</code>文は指定した回数だけ処理をするときに使われます。<code>for</code>構文は以下のように書きます。<br>
             <br>
         </p>
-        <script type="text/plain" class="language-java line-numbers">for( 初期化式; 条件式; 変化式){<br>    繰り返し実行をしたい処理<br>}<br></script>
-        <br>
+        <script type="text/plain" class="language-java line-numbers">for (初期化式; 条件式; 変化式)
+{
+    // 繰り返し実行をしたい処理
+}</script>
+        <p>初期化式、条件式、変化式についてよくわからないと思うので、1つずつ解説していきます。</p>
+        <h3 class="numbering">初期化式</h3>
         <p>
-            初期化式、条件式、変化式についてよくわからないと思うので、1つずつ解説していきます。<br>
-            まず、初期化式についてですが、初期化式は<code>for</code>文が実行されるときに最初の一回だけ実行される式で、条件式で使用する変数の初期化などを主に行います。<br>
-            次に条件式についてですが、これは<code>for</code>文の繰り返し処理をするための条件のようなものです。<br>
-            条件式内の条件と合致している間<code>{}</code>の中のブロック内に記述された処理を上から順に実行し、条件と合致しなくなった時に繰り返し処理を終了し<code>for</code>次の文へ処理を移します。<br>
-            繰り返しが一度実行されブロックの最後に到達したら、最後に変化式が数を変化させます。<br>
-            変化させるといっても<code>+2</code>や<code>*2</code>などを最後につけたすというものですが。<br>
-            言葉では難しいと思うので例を下に書いて説明しようと思います。<br>
-            <br>
+            初期化式は<code>for</code>文が実行されるときに最初の一回だけ実行される式で、
+            条件式で使用する変数の初期化などを主に行います。
         </p>
-        <script type="text/plain" class="language-java line-numbers">for (int webcon = 0; webcon &lt; 2; webcon++){<br>    System.out.println("webcon=" + webcon);<br>}<br></script>
-        <br>
+        <h3 class="numbering">条件式</h3>
         <p>
-            このように入力した場合以下のような手順で処理が実行されます。<br>
-            <ol>
-                <li>初期化式で変数<code>webcon</code>の宣言と初期化(<code>webcon = 0</code>)</li>
-                <li>条件式を評価 <code>webcon &lt; 2</code>は条件を満たすので繰り返しを実行</li>
-                <li>ブロック内の処理を実行(画面に変数 webcon の値を出力)</li>
-                <li>繰り返しの1回目終了</li>
-                <li>変化式で変数 <code>webcon</code>に格納されている値を 1 増加</li>
-                <li>(<code>webcon = 1</code>)</li>
-                <li>条件式を評価 <code>webcon &lt; 2</code>は条件を満たすので繰り返しを実行</li>
-                <li>ブロック内の処理を実行(画面に変数 <code>webcon</code> の値を出力)</li>
-                <li>繰り返しの2回目終了</li>
-                <li>変化式で変数 <code>webcon</code>に格納されている値を1増加(<code>webcon = 2</code>)</li>
-                <li>条件式を評価 <code>webcon &lt; 2</code>は条件を満たしていないので繰り返しを終了</li>
-            </ol>
+            条件式は<code>for</code>文の繰り返し処理をするための条件のようなものです。<br>
+            条件式内の条件と合致している間<code>{ }</code>の中のブロック内に記述された処理を上から順に実行し、
+            条件と合致しなくなったら繰り返し処理を終了します。
+        </p>
+        <h3 class="numbering">変化式</h3>
+        <p>
+            繰り返しが一度実行されブロックの最後に到達したら、最後に変化式が数を変化させます。<br>
+            変化させるといっても、条件式で使用する変数を増やすための処理です。そのため、変数に対して<code>+ 2</code>や<code>* 2</code>などをこの部分で適用させます。<br>
+            言葉では難しいと思うので例を下に書いて説明しようと思います。
+        </p>
+        <script type="text/plain" class="language-java line-numbers">for (int i = 0; i < 2; i++)
+{
+    System.out.println("i = " + i);
+}</script>
+        <p>なお、<code>i++</code>は「<code>i</code>の値を今より1増やす」と言う意味です。</p>
+        <p>このように入力した場合以下のような手順で処理が実行されます。</p>
+        <ol>
+            <li>初期化式で変数<code>i</code>の宣言と初期化 (このとき<code>i = 0</code>)</li>
+            <li>条件式を評価 <code>i &lt; 2</code>は条件を満たすので繰り返しを実行</li>
+            <li>ブロック内の処理を実行 (画面に変数<code>i</code>の値を出力)</li>
+            <li>繰り返しの1回目終了</li>
+            <li>変化式で変数<code>i</code>に格納されている値を1増加させる (このとき<code>i = 1</code>)</li>
+            <li>条件式を評価 <code>webcon &lt; 2</code>は条件を満たすので繰り返しを実行</li>
+            <li>ブロック内の処理を実行(画面に変数 <code>webcon</code> の値を出力)</li>
+            <li>繰り返しの2回目終了</li>
+            <li>変化式で変数 <code>webcon</code>に格納されている値を1増加(<code>webcon = 2</code>)</li>
+            <li>条件式を評価 <code>webcon &lt; 2</code>は条件を満たしていないので繰り返しを終了</li>
+        </ol>
             結果的に繰り返し処理は2回行われ、それぞれ <code>webcon = 0</code>と<code>webcon = 1</code>を画面に出力します。<br>
             <code>if</code>構文と一緒に覚えることでできることがとても増えるので是非覚えてほしいです。(2回目)<br>
         </p>
